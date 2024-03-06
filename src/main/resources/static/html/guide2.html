@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>admin</title>
+<meta charset="utf-8">
+</script>
+<style type="text/css">
+*{margin:0;padding:0}
+ol,ul,li{margin:0;padding:0;list-style:none}
+a{color:#555;text-decoration:none}
+a:hover{text-decoration:underline}
+body{font-family:"맑은고딕",Malgun Gothic,Doutm,Tahoma,sans-serif;-webkit-text-size-adjust:none;font-size:12px;color:#333}
+h1{padding:10px;border-bottom:1px solid #ddd;font-size:24px}
+h2{font-size:18px}
+
+#category{float:left;width:200px;border-right:1px solid #ddd}
+#category li{display:block;border-bottom:1px solid #ddd}
+#category li a{display:block;padding:10px;font-weight:bold}
+#category li a:hover,
+#category li a.on{background:#00abe2;color:#fff;text-decoration:none}
+#category .sub{border-top:1px solid #ddd}
+#category .sub li{border:0}
+#category .sub li a{padding-left:20px}
+#file_contents{margin-left:200px;border-left:1px solid #ddd}
+#footer{clear:both;position:relative;padding:10px;border-top:1px solid #ddd}
+.cont{margin:10px}
+table.file_lst{table-layout:fixed;border-collapse:collapse;width:100%;margin:10px 0;border-bottom:1px solid #ccc}
+table.file_lst tr.line{border-top:2px solid #ccc}
+table.file_lst thead th{padding:7px 5px;background-color:#f0f0f0;border:1px solid #ccc;border-bottom:double #ccc;white-space:nowrap}
+table.file_lst tbody th{padding:10px;border:1px solid #ccc;color:#555;text-align:left}
+table.file_lst tbody td{padding:10px;border:1px solid #ccc;color:#555}
+table.file_lst td a{display:block;color:#114fc1}
+table.file_lst td span{color:red}
+table.file_lst .line{border-top:2px solid #ccc}
+table.file_lst .date{font-family:Tahoma;color:#999}
+.ac{text-align:center}
+</style>
+</head>
+
+<body>
+<div class="cont">
+	<h2>admin guide list</h2>
+	<table class="file_lst">
+	<colgroup>
+	<col width="20%" />
+	<col width="40%" />
+	<col width="40%" />
+	</colgroup>
+	<thead>
+	<tr>
+	<th>파일명</th>
+	<th>페이지명</th>
+	<th>비고</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- web -->
+	<tr>
+	<td><a href="wlessProdMgmt.html" target="_blank">wlessProdMgmt.html</a></td>
+	<td>무선상품관리 - 목록페이지 기준상품 등록시 (판매점 상품 없는 경우 포함)</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="wlessProdReg.html" target="_blank">wlessProdReg.html</a></td>
+	<td>무선상품관리 - 기준상품등록 (경우의 수 포함)</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="wireProdMgmt.html" target="_blank">wireProdMgmt.html</a></td>
+	<td>유선상품관리 - 유선 상품 없을 경우 (최초 진입 시 - 유선상품 등록버튼 경우 포함)</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="wireProdReg.html" target="_blank">wireProdReg.html</a></td>
+	<td>유선 상품 등록</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="wireProdComp.html" target="_blank">wireProdComp.html</a></td>
+	<td>유선 상품 완료</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="wireProdModify.html" target="_blank">wireProdModify.html</a></td>
+	<td>유선 상품 수정</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td><a href="popTerminalFind.html" target="_blank">popTerminalFind.html</a></td>
+	<td>기준 단말기 찾기 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popTerminalGroupFind.html" target="_blank">popTerminalGroupFind.html</a></td>
+	<td>쇼핑몰 상품 단말기 찾기 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popChargeFind.html" target="_blank">popChargeFind.html</a></td>
+	<td>요금제 찾기 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popShopFind.html" target="_blank">popShopFind.html</a></td>
+	<td>쇼핑몰 찾기 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popExtra.html" target="_blank">popExtra.html</a></td>
+	<td>추전 부가서비스 선택 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popUrl.html" target="_blank">popUrl.html</a></td>
+	<td>URL생성 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popInternet.html" target="_blank">popInternet.html</a></td>
+	<td>인터넷 요금제 선택 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popIptv.html" target="_blank">popIptv.html</a></td>
+	<td>TV 요금제 선택 팝업</td>
+	<td>팝업</td>
+	</tr>
+	<tr>
+	<td><a href="popPhone.html" target="_blank">popPhone.html</a></td>
+	<td>인터넷 전화 요금제 선택 팝업</td>
+	<td>팝업</td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+<!-- //cont -->
+</body>
+</html>

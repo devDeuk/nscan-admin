@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.14</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.teamgate</groupId>
+    <artifactId>nscan-admin</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>nscan-admin</name>
+    <description>nscan-admin project for Spring Boot</description>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- DB -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <!-- mapper-->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <!--Swagger 3-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <!--        &lt;!&ndash; Spring Security (비밀번호 암호화)&ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
+        <!--            <version>2.4.5</version>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <!--			<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.security</groupId>
+            <artifactId>xml-security-impl</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bgee.log4jdbc-log4j2</groupId>
+            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+            <version>1.16</version>
+        </dependency>
+
+
+        <!--		<dependency>-->
+        <!--			<groupId>eai</groupId>-->
+        <!--			<artifactId>mqapi</artifactId>-->
+        <!--			<version>2.2</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>com.sktel</groupId>-->
+        <!--			<artifactId>icasApi</artifactId>-->
+        <!--			<version>3.20</version>-->
+        <!--			<classifier>jre6_nonSSL</classifier>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>com.sktel</groupId>-->
+        <!--			<artifactId>icasApi</artifactId>-->
+        <!--			<version>3.20</version>-->
+        <!--			<type>pom</type>-->
+        <!--		</dependency>-->
+
+        <!--		<dependency>-->
+        <!--			<groupId>com.cubeone</groupId>-->
+        <!--			<artifactId>CubeOneAPI</artifactId>-->
+        <!--			<version>1.0</version>-->
+        <!--		</dependency>-->
+
+
+        <dependency>
+            <groupId>icasApi</groupId>
+            <artifactId>icasApi</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/icasApi.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CPClient</groupId>
+            <artifactId>CPClient</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/CPClient.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CPCrypt</groupId>
+            <artifactId>CPCrypt</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/CPCrypt.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>cryptix32</groupId>
+            <artifactId>cryptix32</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/cryptix32.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>CubeOneAPI</groupId>
+            <artifactId>CubeOneAPI</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/CubeOneAPI.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>eai_mqapi</groupId>
+            <artifactId>eai_mqapi</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/eai_mqapi.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>xmlsec</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/xmlsec-2.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>simplecaptcha</groupId>
+            <artifactId>simplecaptcha</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/simplecaptcha-1.2.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>SMSReqRespEJB</groupId>
+            <artifactId>SMSReqRespEJB</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/SMSReqRespEJB.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>webt50</groupId>
+            <artifactId>webt50</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/webt50.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>webtutil</groupId>
+            <artifactId>webtutil</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/webtutil.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>json_simple</groupId>
+            <artifactId>json_simple</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/json_simple-1.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>json-lib-2.3-jdk13</groupId>
+            <artifactId>json-lib-2.3-jdk13</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/json-lib-2.3-jdk13.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${parent.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

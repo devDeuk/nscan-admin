@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- CONSOLE LOG APPENDER -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <!-- <pattern>%highlight(%date{"yyyy-MM-dd HH:mm:ss.SSS"}) %highlight(%-5level) [%green(%X{sessionId})] %yellow(%logger{36}@%method\(%line\)) - %msg%n%throwable</pattern> -->
+            <pattern>%cyan(%date{"yyyy-MM-dd HH:mm:ss.SSS"}) %highlight(%-5level) %magenta(${PID:- }) --- %cyan[%8.15t] - %blue(%-40.40logger{36}) %blue[%3.10line] %red(:) %msg%n%throwable</pattern>
+        </encoder>
+    </appender>
+    <logger name="jdbc" additivity="false" level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+  
+    <logger name="jdbc.sqlonly" additivity="false" level="OFF">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="jdbc.sqltiming" additivity="false" level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="jdbc.audit" additivity="false" level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="jdbc.resultset" additivity="false" level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="jdbc.resultsettable" additivity="false" level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="jdbc.connection" additivity="false" level="OFF">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+
+    <logger name="com.skcc.template" additivity="false" level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>

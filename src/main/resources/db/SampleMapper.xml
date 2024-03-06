@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sktel.nscan.port.database.SampleMapper">
+    <select id="findById" resultType="Sample">
+        SELECT seq
+              , title
+              , content
+              , cre_nm
+              , cre_dt
+          FROM sample
+         WHERE seq = #{seq}
+    </select>
+
+    <select id="findAll" resultType="Sample">
+        SELECT seq
+             , title
+             , content
+             , cre_nm
+             , cre_dt
+        FROM sample
+    </select>
+
+    <insert id="save" parameterType="Sample">
+        INSERT INTO sample (
+                           title
+                           , content
+                           , cre_nm
+                           , cre_dt
+        )
+        VALUES ( #{title}, #{content}, #{creNm}, now())
+    </insert>
+
+    <update id="update" parameterType="Sample">
+        UPDATE sample
+        SET    title = #{title}
+          , content = #{content}
+          , cre_nm = #{creNm}
+        WHERE seq = #{seq}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        DELETE FROM sample
+        WHERE  seq = #{seq}
+    </delete>
+
+</mapper>

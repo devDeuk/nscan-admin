@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* ==========================================================================
+   Base styles & Helper
+   ========================================================================== */
+/* common */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumGothic-Bold.eot);
+  src: url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Bold.woff2) format('woff2'),
+       url(../font/NanumGothic-Bold.woff) format('woff'),
+       url(../font/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumGothic-Regular.eot);
+  src: url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-Regular.woff2) format('woff2'),
+       url(../font/NanumGothic-Regular.woff) format('woff'),
+       url(../font/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../font/NanumGothic-ExtraBold.eot);
+  src: url(../font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(../font/NanumGothic-ExtraBold.woff) format('woff'),
+       url(../font/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+html, body {height:100%;}
+body {font:normal 12px/1.5 Dotum,'돋움'; background:#e4e5e9;}
+body.login {background:#f3f3f3;}
+
+a {text-decoration:none;}
+
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+#header {position:absolute; top:0; left:0; height:144px; width:100%; font:600 12px/13px 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; background:#FFF url(../img/common/bg/bg_header.png) 50% 0 no-repeat;}
+	#header .container {margin:0 auto; width:1245px; background:#FFF url(../img/common/bg/bg_header.png) 50% 0 no-repeat;}
+	#util {position:relative; height:30px; background:url(../img/common/bg/bg_header.png) 50% 0 no-repeat; }
+		#util .util-info {/*width:312px;*/ margin:0;padding:0;}
+		#util .util-info li {float:left;display:block;width:102px; text-align:center; border-left:1px solid #c41637; background:#ec1a41;} 
+		#util .util-info li a {display:block;height:30px;line-height:30px; color:#FFF; border-left:1px solid #d55a72;}
+		#util .util-info li:first-child {border-left:none}
+		#util .util-info li:first-child a {border-left:none}
+
+		#util .util-extra {overflow:hidden; position:absolute; z-index:5; right:100px; top:0; margin:0;padding:0;}
+		#util .util-extra li {float:left;display:block; padding-top:9px; height:30px;}	
+		#util .util-extra li a {position:relative; display:block; padding:0 22px; color:#FFF; border-left:1px solid #3c4857;}
+		#util .util-extra li:first-child a {border-left:none;}
+
+		#util .auth {position:absolute; z-index:0; right:30px; top:5px; width:215px;}
+			#util .auth .sign {float:right; display:block; padding:4px 10px 2px; height:15px; color:#FFF; background:#2d3f55;}
+			#util .auth .profile {clear:right; float:right; margin:25px 30px 0 0; padding:8px 20px 6px; white-space:nowrap; color:#000; border:1px solid #cbcbcb}
+
+	#navigation {position:relative; height:114px;}
+		#brand {float:left;display:block;padding:17px 0;width:200px;text-align:center;}
+		#gnb {margin:0;padding:0;}
+		#gnb > li {float:left;display:block;}
+		#gnb > li > a {display:block; padding:25px 30px 20px; text-align:center; color:#333; font-size:16px; line-height:30px; background:url(../img/common/bul/dot.png) 0 50% no-repeat;}
+		#gnb > li:first-child > a {background:none}
+		#gnb > li.active > a {color:#ec1a41}
+		#gnb > li.current > a {color:#ec1a41;}
+		
+		
+		#gnb > li.current .subGnb {display:block}
+		#gnb > li.active .subGnb {display:block}
+		#gnb .subGnb {display:none; position:absolute; left:205px; margin:0;padding:0;}
+		#gnb .subGnb > li {float:left;display:block;font-size:14px}
+		#gnb .subGnb > li a {display:block; padding:15px 25px; color:#808080;background:url(../img/common/bg/line.png) 0 50% no-repeat;}
+		#gnb .subGnb > li a:hover {color:#000;}
+		#gnb .subGnb > li.current a {color:#000;}
+		#gnb .subGnb > li:first-child a {background:none}
+
+#jqGrid {margin-top:20px}
+
+#footer {height:61px; font:600 12px/13px 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; background:#4e4e4e;}
+	#footer .container {position:relative; margin:0 auto; width:1245px; padding:24px 0; background:#4e4e4e}
+	
+	#brandSub {position:absolute; left:48px; top:10px;}
+	#footer .copyright {margin-left:157px; color:#b5b5b5;}
+
+#popDetailContent {overflow:hidden; margin:5px auto; width:990px; }
+	#popDetailContent .container {position:relative; padding:20px 25px; border:1px solid #c7c7c7; background:#FFF;}
+	#popDetailContent .notice-alarm {margin-bottom:20px; color:#FFF; background:#e10010; border-top:1px solid #a7000e; border-left:1px solid #a7000e}	
+	#popDetailContent .news-ticker {margin:0;padding:0;height:37px; list-style:none}
+	#popDetailContent .news-ticker li {height:37px;}
+	#popDetailContent .news-ticker a {display:inline-block;padding:10px 18px 8px; color:#FFF;}
+	
+	#popDetailContent .widgetA {margin-bottom:20px}
+	#popDetailContent .widgetB {float:left; display:block; width:423px; margin-right:20px;}
+	#popDetailContent .widgetC {float:right; display:block; width:584px;}
+	#popDetailContent .widgetD {float:left; display:block; width:302px; height:126px; margin-bottom:20px;}
+	
+	#popDetailContent .container.widget-qna-stat {padding:25px 15px; background:#FFF url(../img/common/ico/qna.png) 30px 55px no-repeat;}
+	#popDetailContent .container.widget-status-stat {padding:25px 15px; background:#FFF url(../img/common/ico/status.png) 30px 44px no-repeat;}
+
+	#popDetailContent .container > h1 {margin:0 0 20px; color:#000; font:bold 23px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움';}
+	#popDetailContent .container > h1.join-title {clear:both; margin:20px 0 20px; font-size:26px; text-align:center;}
+		
+
+
+#content {overflow:hidden; min-height:100%; margin:/*-144px*/0 auto -61px; padding:174px 0 91px; width:990px; -ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+	#content .notice-alarm {overflow:hidden;height:37px;margin-bottom:20px; color:#FFF; background:#e10010; border-top:1px solid #a7000e; border-left:1px solid #a7000e}	
+	#content .news-ticker {margin:0;padding:0;height:37px; list-style:none}
+	#content .news-ticker li {height:37px;}
+	#content .news-ticker a {display:inline-block;padding:10px 18px 8px; color:#FFF;}
+
+	#content .container {position:relative; padding:25px 29px; border:1px solid #c7c7c7; background:#FFF;}
+	#content .widgetA {margin-bottom:20px}
+	#content .widgetB {float:left; display:block; width:423px; margin-right:20px;}
+	#content .widgetC {float:right; display:block; width:584px;}
+	#content .widgetD {float:left; display:block; padding:15px 15px; width:302px; height:80px; margin-bottom:20px;}
+	#content .widgetE {float:left; display:block; width:584px;}
+	#content .widgetF {float:right; display:block; padding:15px 15px; width:302px; height:80px; margin-bottom:20px;}
+	
+	#content .container.widget-qna-stat {padding:15px 15px; background:#FFF url(../img/common/ico/qna.png) 30px 25px no-repeat;}
+	#content .container.widget-modify-stat {padding:15px 15px; background:#FFF url(../img/common/ico/modify.png) 30px 25px no-repeat;}
+	#content .container.widget-status-stat {padding:15px 15px; background:#FFF url(../img/common/ico/status.png) 30px 26px no-repeat;}
+
+	#content .container > h1 {margin:0 0 20px; color:#000; font:bold 23px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움';}
+	#content .container > h1.join-title {clear:both; margin:20px 0 20px; font-size:26px; text-align:center;}
+	
+	.exContent {margin:30px 0; min-height:400px; border:1px solid #c7c7c7; background:#FFF;}
+	
+	.widget-header {overflow:hidden}
+		.widget-header > h2 {float:left;display:block; margin:0 10px 15px 0; color:#000; font:bold 17px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움';}
+		.widget-header .more {float:left;display:block;}
+		.widget-header .widget-header-etc {float:right;margin:0;padding:0;}
+		.widget-header .widget-header-tab {float:right;margin:0;padding:0;list-style:none}
+		.widget-header .widget-header-tab li {display:inline; padding:0 8px 0 10px; border-left:1px solid #b0b0b0}
+		.widget-header .widget-header-tab li:first-child {border-left:none}
+		.widget-header .widget-header-tab li a {color:#666; font-weight:bold}
+		.widget-header .widget-header-tab li.current a {color:#ec1a41;}
+	
+	.widget-cont {margin:0 0 0 105px;}
+		.widget-cont > h2 {margin:0 10px 5px 0; color:#000; font:bold 17px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움';}
+		.widget-cont em {font-size:1.2em; color:#333}
+		.widget-cont p {margin:0 0 4px; letter-spacing:-1px; line-height:1.2}
+		.widget-cont .widget-info {margin:5px 0 10px; font-weight:bold; color:#333}		
+		.widget-cont .widget-info .emp2 em {color:#e40013}
+		.widget-cont .widget-info p.mgt10 {margin-top:5px !important}
+		
+
+/* LOGIN */
+#header.need-login {height:75px; background:#FFF url(../img/common/bg/bg_header.png) 50% -30px no-repeat;}
+#header.need-login .container {margin:0 auto; width:990px; background:#FFF url(../img/common/bg/bg_header.png) 50% -30px no-repeat;}
+	#header.need-login #navigation {height:75px}
+	#header.need-login #brand {float:none;margin:0 auto;padding:17px 0;width:200px;text-align:center;}
+	
+	body.login #content, #header.need-login + #content {padding-top:105px;}
+	body.login #footer .container {width:990px;}
+	
+	#content .login-container {margin:80px auto 0; padding:50px 130px; width:400px; height:282px; background:url(../img/common/bg/login.png) no-repeat;}	
+	
+	#content .login-container .control-type {padding:0 22px; color:#000; }
+		#content .login-container h1 {margin-top:0; margin-bottom:10px}
+		#content .login-container .lead { margin-top:0; font-size:1.15em; font-family:'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; color:#404040; line-height:1.3}
+		#content .login-container .control-type .radio-label {padding-left:0; padding-right:14px}
+
+
+	.login-input {position:relative; margin:10px 0 18px; padding:18px 0 10px; border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1}
+	.login-input .control-group {clear:left; padding-left:22px;}
+	.login-input .control-group label {float:left; display:block; margin-top:4px; width:56px; font-size:1.1em; font-family:'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; color:#404040; line-height:1.3}
+	.login-input .input {margin-bottom:10px; width:200px}
+	.login-input .check-label {clear:left; margin-left:78px; padding-left:0}
+
+	.login-input .btn-login {position:absolute; right:22px; top:16px; width:86px; height:58px}
+	.login-input .btn-clear-input {position:absolute; z-index:10; right:100px; top:5px; outline:none}
+
+	.login-handler {text-align:center;}
+	.login-handler .btn-round { padding:0; font-weight:normal; color:#FFF; background:url(../img/common/btn/btn_round_black.png) no-repeat;}
+	.login-handler .btn-round > span {display:block; margin-left:10px; padding:8px 9px 5px 0; height:14px; background:#424242 url(../img/common/btn/btn_round_black.png) right top no-repeat;}
+
+
+/* PERSISTENCE */
+.persistence-container {margin:80px auto; padding:75px 95px; width:493px; height:290px; text-align:center; background:#FFF url(../img/common/bg/bg_persistence.png) no-repeat;}
+	.persistence-container h1 {margin:60px 0 0; font:bold 36px/1.3 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; color:#000;}
+	.persistence-container h2 {margin:33px 0 0; font:bold 19px/1.3 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; color:#434343;}
+	.alert-duration {margin:40px 0 0; padding:8px 0; color:#FFF; font:500 18px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; background:#ee3757}
+
+/* ==========================================================================
+   POPUP
+   ========================================================================== */
+body.popup {position:relative; background:#FFF; overflow-y:auto}
+body.popup.scrollable-pop {overflow-y:scroll}
+
+h3.circle {padding-left:22px; color:#000; letter-spacing:-1px; font:bold 18px/1.3 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; background:url(../img/common/bul/circle.png) 0 5px no-repeat;}
+body.popup h4 {margin:20px 0 15px; padding-left:20px; color:#000; letter-spacing:-1px; font:bold 14px/1.3 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; background:url(../img/common/bul/arrow.png) 0 5px no-repeat;}
+body.popup h5 {font-size:1.1em; margin:8px 0 5px}
+.border-box {margin-top:10px; padding:20px; border:1px solid #d8d8d8;}
+.border-box.scrollable {height:115px; overflow-y:auto}
+.bbsScrollable {height:230px; overflow-y:scroll}
+.bbsScrollable.addressTable {height:152px}
+.bbsScrollable.smsTable {height:362px;}
+
+
+#popupLayer {padding:0 30px 1px; border-top:4px solid #ec1a41}
+	#popupHeader {margin-bottom:30px; padding-top:20px; border-bottom:2px solid #000; background:url(../img/common/brand_pop.png) right 20px no-repeat;}
+	#popupHeader.login {background:url(../img/common/brand_pop_color.png) right 9px no-repeat;}
+	#popupHeader h1 {margin:0 0 20px; color:#000; font:bold 28px/1.1 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움';}
+
+	#popupContent {color:#000; border-top:2px solid #ff8728}
+	#popupContent.normal {border-top:none;}
+	
+		#faqList {margin:0; height:340px; overflow-y:auto;}
+		#faqList dt {padding:10px 10px 10px 40px; border-bottom:1px solid #d9d9d9; background:url(../img/common/ico/question.png) 10px 9px  no-repeat;}
+		#faqList dt a {color:#000;}
+		#faqList dd {display:none; margin:0;padding:20px 10px; background:#fafafa; border-bottom:1px solid #d9d9d9;}
+		#faqList dd p {margin:0;}
+		
+		#itemList {padding:15px 15px; max-height:60px; overflow-y:auto; border:1px solid #c7c7c7;}
+		#itemList ul {overflow:hidden; list-style:none; margin:0; padding:0}
+		#itemList li {float:left;display:block;margin:5px 0; width:135px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -moz-binding:url('ellipsis.xml#ellipsis');}
+		#itemList li .check-label {margin-right:0}
+		#itemList li .check-label > b {float:left;font-weight:normal;margin-right:3px;}
+		
+		
+		.itemList {margin:10px 0; padding:15px 15px; max-height:60px; overflow-y:auto; border:1px solid #c7c7c7;}
+		body.popup .itemList h4 {margin:0 0 12px}
+		body.popup .itemList h5 {font-size:1.1em; margin:8px 0 5px}
+		.itemList ul {overflow:hidden; list-style:none; margin:0; padding:0}
+		.itemList ul.indent {margin-left:22px}
+		.itemList li {float:left;display:block;margin:5px 0; width:135px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -moz-binding:url('ellipsis.xml#ellipsis');}
+		.itemList li .check-label {margin-right:0}
+		
+		.itemList.join-type-list {max-height:none;}
+		.itemList.fixed, #itemList.fixed {height:60px;}
+		
+
+		.disabled {opacity:0.3; filter:alpha(opacity=30); }
+		.search-opt {margin-bottom:5px; text-align:left !important;}
+		.search-opt > label.radio-label {float:left;display:block;width:100px}
+		.search-opt > label.radio-label input {top:3px}
+		
+		.detail-address {width:430px; margin:0 auto; text-align:left !important;}
+		
+		.inputImg {opacity:1.0; filter:alpha(opacity=100);}
+		.inputImg[disabled] {opacity:0.3; filter:alpha(opacity=30);}
+
+
+
+	#popupFooter {position:relative;margin:24px 0 0; padding:6px 30px; min-height:18px; text-align:right; background:#333}
+	#popupFooter .check-label {top:2px; margin-right:20px; color:#ccc;}
+
+	
+
+
+
+
+/* SMS 전송 */
+	#popupSms {color:#000;}
+		.smsContent {padding:9px 19px 19px; width:820px; background-color:#fafafa; border:1px solid #d5d5d5;}
+		.smsContent:after {content:""; display:block; clear:both;}
+		.smsContent .forwarding {float:left; width:153px;}
+
+		.forwarding .smsMessage {padding:0; width:151px; height:159px; border:1px solid #abadb3; overflow-y:scroll;}
+		.forwarding .byte {margin:8px 0 0; font-size:11px; text-align:right;}
+
+		.forwarding .smsbtnArea {margin:16px 0 0; width:inherit; overflow:hidden;}
+		.forwarding .smsbtnArea .btnNewwrite {margin:0 5px 0 2px; float:left;}
+		.forwarding .smsbtnArea .btnSend {float:right; width:73px; height:30px;}
+
+		.smsContent .searchContent {float:right; width:656px;}
+
+		.searchContent .userSearch {margin:4px 0 14px 33px; width:623px;}
+		.searchContent .userSearch:after {content:""; display:block; clear:both;}
+		.searchContent .userSearch label {margin:4px 18px 0 0; float:left;}
+		.searchContent .userSearch input {float:left;}
+		.searchContent .userSearch input.inpText {margin-right:10px; width:356px; height:22px; line-height:22px; border:1px solid #abadb3;}
+
+		.searchContent .userStep {width:654px; font-size:11px; background-color:#fff; border:1px solid #d6d6d6;}
+		.searchContent .userStep:after {content:""; display:block; clear:both;}
+		.searchContent .userStep ul {margin:0; padding:0;}
+		.searchContent .userStep li {list-style-type:none;}
+		.searchContent .userStep a {color:#000;}
+
+		.searchContent .userStep .step1 {float:left; width:184px; height:458px; overflow-y:scroll;}
+		.searchContent .userStep .step1 span {display:block; padding:6px 0 5px 10px;}
+		.searchContent .userStep .step1 span .btn-collapse {float:left; display:block; width:12px; margin:2px 5px 0 0; padding:0; background:url(../img/common/ico/ico_plus.gif) 0 0 no-repeat; text-indent:-9999px;}
+		.searchContent .userStep .step1 li li span {padding:5px 0 6px 26px;}
+		.searchContent .userStep .step1 li li li span {padding:5px 0 6px 46px;}
+		.searchContent .userStep .step1 span.active {background:#d1e4fb;}
+		.searchContent .userStep .step1 span.minus .btn-collapse {background:url(../img/common/ico/ico_minus.gif) 0 0 no-repeat;}
+		.searchContent .userStep .step1 span.plus .btn-collapse {background:url(../img/common/ico/ico_plus.gif) 0 0 no-repeat;}
+		.searchContent .userStep .step1 span.no-btn .btn-collapse {visibility:hidden}
+		
+		.searchContent .userStep .step1 a {display:inline-block; vertical-align:middle; padding:0; line-height:16px; letter-spacing:-1px;}		
+		.searchContent .userStep .step1 a.icoNon {background:none;}
+		.searchContent .userStep .step1 a.icoNon.active {background-color:#d1e4fb;}
+						
+		.searchContent .userStep .step2 {float:left; width:158px; height:457px; background:url(../img/common/bg/bg_sms_step2.gif) 0 0 repeat-y; border-right:1px solid #ebebeb;}
+		.searchContent .userStep .step3 {float:left; width:250px; height:457px; background:url(../img/common/bg/bg_sms_step3.gif) 0 0 repeat-y;}
+		
+		.searchContent .userStep .stepBtn {padding:181px 0 0; float:left; width:60px; height:277px; text-align:center; border-right:1px solid #ebebeb;}
+		.searchContent .userStep .stepBtn a {display:block;}
+		.searchContent .userStep .stepBtn .marB9 {margin-bottom:9px;}
+
+		/* table-header / table-data scrollable */
+		.searchContent .table-header {}
+		.searchContent .table-data {height:431px; overflow-x:hidden; overflow-y:auto;}
+		.searchContent .table-data thead {display:none}
+
+		.searchContent .userList {width:100%; margin-left:1px; border-collapse:collapse; table-layout:fixed; background:#FFF;}
+		.searchContent .userList thead th {padding:6px 0 4px; color:#FFF; background:#737373; border:1px solid #FFF; border-top:0;border-right:0;}
+		.searchContent .userList thead th.no {width:28px;border-left:0;}
+		.searchContent .userList thead th.phone-no {width:102px;}
+		.searchContent .userList tbody th {width:28px; padding:6px 0 4px; border:0; border-bottom:1px solid #ebebeb;}
+		.searchContent .userList tbody td {padding:6px 0 4px 9px; border:1px solid #ebebeb; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -moz-binding:url('ellipsis.xml#ellipsis');}
+		.searchContent .userList tbody td.user {width:110px;}
+		.searchContent .userList tbody tr.active {background:#d1e4fb; }
+		.searchContent .userList tbody tr.active th, .searchContent .userList tbody tr.active td {background:#d1e4fb;}
+
+		
+		/*
+		.searchContent .userStep .step2 li dl {}
+		.searchContent .userStep .step2 li dd {float:none; padding-left:9px; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -moz-binding:url('ellipsis.xml#ellipsis');}
+		
+		.searchContent .userStep .step2  dl.active {background-color:#d1e4fb; border-top:1px solid #c1d4eb; border-right:1px solid #ebebeb; border-bottom:1px solid #c1d4eb; }
+		.searchContent .userStep .step2  dl.active dt, 
+		.searchContent .userStep .step2  dl.active dd {position:relative; top:-1px; margin-top:1px; margin-bottom:-1px; z-index:1;}
+		.searchContent .userStep .step2  dl.active dd {border-right:0 none;}
+
+		
+
+		
+		.searchContent .userStep .step3 li dd.devide119 {padding-left:10px; width:108px;}
+		.searchContent .userStep .step3 li dd.devide101 {padding-left:10px; width:91px;}
+
+		.searchContent .userStep .step3  dl.active dt, 
+		.searchContent .userStep .step3  dl.active dd {position:relative; top:-1px; margin-top:1px; margin-bottom:-1px; background-color:#d1e4fb; border-top:1px solid #d1e4fb; border-right:1px solid #ebebeb; border-bottom:1px solid #d1e4fb; z-index:1;}
+		.searchContent .userStep .step3  dl.active dd.devide101 {border-right:0 none;} 
+
+		.searchContent .userList li {position:relative; overflow:hidden; *margin-top:-2px;}
+		.searchContent .userList li.bg {width:inherit; height:26px;}
+		.searchContent .userList li.bg:after {content:""; display:block; clear:both;}
+		.searchContent .userList li.bg span {position:relative; top:-1px; padding:7px 0 5px; float:left; width:128px; color:#fff; text-align:center; font-weight:bold; background-color:#737373; z-index:1;}
+		.searchContent .userList li.bg span.devide29 {width:29px; border-right:1px solid #ebebeb;}
+		.searchContent .userList li.bg span.devide119 {width:118px; border-right:1px solid #ebebeb;}
+		.searchContent .userList li.bg span.devide101 {width:101px;}
+		.searchContent .userList li dl {margin:0; width:inherit; overflow:hidden; border-bottom:1px solid #ebebeb; cursor:pointer;}
+		.searchContent .userList li dt {margin:0; padding:5px 0 5px; float:left; width:29px; text-align:center;}
+		.searchContent .userList li dd {margin:0; padding:5px 0 5px; float:left;} 
+		*/
+
+
+/* 로그인 관련 */
+	#changeNumber {display:none}
+	.su-login {font-weight:bold; margin:60px 0 30px; text-align:center}
+	
+/* 한글 폰트 관련 */ 
+#chfont {font:bold 14px/1.3 'Nanum Gothic', NanumGothic,'나눔고딕', Dotum, '돋움'; }
+
+
+
+/* ==========================================================================
+   ie fix
+   ========================================================================== */
+
+/* IE7 */
+.ie7 .login-input .input {margin-bottom:6px; width:188px}
+html.ie7, html.ie8 {overflow:hidden} /* popup 스크롤 위해 히든처리, JS 에서 팝업이 아니면 다시 auto로 변경 */
+.ie7 #footer {zoom:1;}
+.ie7 .widget-header > h2 {margin:0 10px 0 0; padding-bottom:15px;}
+
+
+
+.ie7 #ieContent, .ie8 #ieContent {overflow:hidden; min-height:100%; margin:0 auto -61px; width:990px; box-sizing:content-box;}
+.ie7 #ieContent #content , .ie8 #ieContent #content {margin:0; padding:174px 0 91px;}
+
+.ie7 body.login #ieContent #content, .ie7 #header.need-login + #ieContent #content { padding-top:105px; }
+.ie8 body.login #ieContent #content, .ie8 #header.need-login + #ieContent #content { padding-top:105px; }
+
+
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {}
+
+
+
+

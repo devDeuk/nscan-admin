@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths chrome" itemscope="itemscope" itemtype="http://schema.org/WebPage" lang="ko" style="">
+<head>
+<title>SK T-gate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- 
+<meta name="description" content="SK T-gate" />
+<meta name="keywords" content="SK T-gate" />
+ -->
+<meta name="viewport" content="width=1280">
+<link rel="stylesheet" type="text/css" href="/web/admin/css/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" type="text/css" href="/web/admin/js/jqgrid/css/ui.jqgrid.css">
+<link rel="stylesheet" type="text/css" href="/web/admin/js/jqgrid/css/ui.multiselect.css">
+
+<link rel="stylesheet" href="/web/admin/css/jquery-ui.smoothness.css">
+<link rel="stylesheet" href="/web/admin/css/jquery.multiselect.css">
+<link rel="stylesheet" href="/web/admin/css/normalize.css" media="all">
+<link rel="stylesheet" href="/web/admin/css/component.css" media="all">
+<link rel="stylesheet" href="/web/admin/css/style.css" media="all">
+
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/common.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/common_Html.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/jquery.ui.datepicker-ko.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/lib/jquery.multiselect.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/jqgrid/src/i18n/grid.locale-en.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/jqgrid/js/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/jqgrid/js/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/datejs/date.js"></script>
+<script type="text/javascript" language="JavaScript" src="/web/admin/js/datejs/date-ko-KR.js"></script>
+
+<!-- Le supporter -->
+<script>window.jQuery || document.write('<script src="/web/admin/js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/web/admin/js/lib/jquery-ui-1.10.3.min.js"><\/script>')</script>
+
+<!--[if lte IE 8]>
+<script src="/web/admin/js/lib/html5shiv-printshiv.js"></script>
+<script src="/web/admin/js/lib/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if IE 8]>
+<script src="/web/admin/js/lib/IE8.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="/web/admin/js/lib/IE7.js"></script>
+<![endif]-->
+
+<script src="/web/admin/js/plugins.js"></script><style type="text/css"></style>
+<script src="/web/admin/js/script.js"></script>
+<script type="text/javascript">
+</script>	
+</head>
+
+<body>
+<header id="header">
+	<div class="container">		
+		<nav id="util">
+			<ul class="util-info">
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">판매사이트 요청</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="util-extra">
+				<li><a href="#">시스템점검 설정</a></li>
+				<li><a href="#">배치 일일 점검</a></li>
+				<li><a href="#">고객센터조직변경</a></li>
+			</ul>
+			<div class="auth">
+				<a href="#" class="sign">로그아웃</a>
+				<span class="profile">
+					슈퍼관리자황혜림 (P140250)
+			    </span>
+			</div>
+		</nav>
+		<!-- / #util -->
+		<div id="navigation">
+			<a href="#" id="brand"><img src="/web/admin/img/common/brand.png" alt="티게이트"></a>
+			<ul id="gnb">
+				<li>
+					<a href="#">조직관리</a>
+					<ul class="subGnb">
+						<li><a href="#">대리점 관리</a></li>
+						<li><a href="#">판매자 관리</a></li>
+						<li><a href="#">조직별 사용자 검색</a></li>
+						<li><a href="#">예외조직 관리</a></li>
+						<li><a href="#">판매사이트 관리</a></li>
+					</ul>
+				</li>
+				<li class="current" data-current="true">
+					<a href="#">상품관리</a>
+					<ul class="subGnb">
+						<li class="current"><a href="#">무선상품관리</a></li>
+						<li><a href="#">유선상품관리</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#">가입신청관리</a>
+					<ul class="subGnb">
+						<li><a href="#">가입신청현황 관리</a></li>
+						<li><a href="#">SWING일괄전송</a></li>
+						<li><a href="#">운송장조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">통계관리</a>
+					<ul class="subGnb">
+						<li><a href="#">가입신청현황통계</a></li>
+						<li><a href="#">월별가입신청통계</a></li>
+						<li><a href="#">무선판매정책현황</a></li>
+						<li><a href="#">조직통계</a></li>
+						<li><a href="#">유선통계</a></li>
+						<li><a href="#">가입신청상태별현황</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">정책관리</a>
+					<ul class="subGnb">
+						<li><a href="#">대리점승인권한관리</a></li>
+						<li><a href="#">판매통제관리</a></li>
+						<li><a href="#">채널관리</a></li>
+						<li><a href="#">공통코드 관리</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- / # navigation -->
+	</div>
+</header>
+
+<div id="content">
+	<!-- 긴급공지 -->
+	<div class="notice-alarm" id="notice-alarm" style="display: none; overflow: hidden; position: relative; height: 0px;"></div>
+	<!-- //긴급공지 -->
+	
+	<div class="container">
+		<!-- bread crumbs -->
+		<ul class="location">
+			<li class="first"><a href="#"><img src="/web/admin/img/common/ico/icoHome.gif" alt="홈"></a></li>
+			<li><a href="#">상품관리</a></li>
+			<li class="current"><a href="#">무선 상품관리</a></li>
+		</ul>
+		<!-- /bread crumbs -->
+		
+		<h1>무선 상품관리</h1>
+		<div class="bbsFilter">
+			<div class="tableList">
+				<table class="bbsType05">
+					<caption>필터</caption>
+					<colgroup>
+						<col style="width:80px">
+						<col style="">
+						<col style="width:80px">
+						<col style="">
+						<col style="width:80px">
+						<col style="">
+						<col style="width:80px">
+						<col style="">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label>본부명</label></th>
+							<td>
+								<select class="select01" style="width:110px;">
+									<option>선택</option>
+									<option>수도권마케팅본부</option>
+									<option>회선사업본부</option>
+									<option>부산마케팅본부</option>
+									<option>대구마케팅본부</option>
+									<option>서부마케팅본부</option>
+									<option>중부마케팅본부</option>
+									<option>Enterprise Biz.본부</option>
+									<option>CV추진실(가상)</option>
+									<option>Data사업본부</option>
+									<option>Commercial Biz.본부</option>
+									<option>IoT솔루션사업본부</option>
+									<option>Biz.마케팅본부</option>
+									<option>유통사업부</option>
+									<option>수도권마케팅2본부</option>
+									<option>특수마케팅본부</option>
+								</select>
+							</td>
+							<th><label>마케팅팀</label></th>
+							<td>
+								<select class="select01" style="width:110px;">
+									<option>선택</option>
+									<option>CV Process혁신팀(가상)</option>
+								</select>
+							</td>
+							<th><label>대리점</label></th>
+							<td>
+								<select class="select01" style="width:110px;">
+									<option>선택</option>
+									<option>유키대리점</option>
+								</select>
+							</td>
+							<th><label>판매자</label></th>
+							<td>
+								<select class="select01" style="width:110px;">
+									<option>선택</option>
+									<option>[PTEST96]BIZ테스트</option>
+									<option>[PTEST95]MTGATE테스트</option>
+									<option>[PTEST93]가판테스트</option>
+									<option>[KBS6303]권봉수</option>
+									<option>[SEONGDEUK]김성득</option>
+									<option>[DBDLFL96]김용일</option>
+									<option>[DBDLFL91]김용일</option>
+									<option>[PP131003]남성수</option>
+									<option>[PP115233]마정욱</option>
+									<option>[BP127596]박승희</option>
+									<option>[PP127596]박승희</option>
+									<option>[PTEST92]방판테스트</option>
+									<option>[BLUEBUG111]배진용</option>
+									<option>[PP131002]송미선</option>
+									<option>[PP069401]양성환</option>
+									<option>[O2O0001]오투오</option>
+									<option>[PTEST91]온라인테스트</option>
+									<option>[SYOSC123]우현식</option>
+									<option>[GIL08091]이종길</option>
+									<option>[GIL08092]이종길</option>
+									<option>[PTESTHJ]이혜진</option>
+									<option>[TESTLHH]이호한</option>
+									<option>[TESTLHH2]이호한</option>
+									<option>[DAILYTEST]장석재</option>
+									<option>[JIY882266]정인용</option>
+									<option>[BJIY88226]정인용</option>
+									<option>[MTGDEV01]최창표</option>
+									<option>[HIKE1121]한인규</option>
+									<option>[PTEST94]홈쇼핑테스트</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="tableBox">
+			<div class="tableTop">
+				<a href="#" class="btnWht">선택삭제</a>
+				<!-- [D] : 기준상품 등록했을때만 노출 기준 상품 없을시 display:none처리 -->
+				<!-- ########## 수정(20190611) 시작 ########## -->
+				<a href="#" class="btnGry">개별상품추가</a>
+				<!-- ########## 수정(20190611) 끝 ########### -->
+			</div>
+			<table class="listType01">
+				<caption>목록</caption>
+				<colgroup>
+					<col style="width:20px">
+					<col style="width:60px">
+					<col style="width:300px">
+					<col style="width:280px">
+					<col style="width:120px">
+					<col style="width:150px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th><input type="checkbox" id="" class="cbox" name=""></th>
+						<th>번호</th>
+						<th>상품명</th>
+						<th>메모</th>
+						<th>등록일</th>
+						<th>구분</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- [D] : 기준상품 영역 -->
+					<tr>
+						<td colspan="5">기준상품</td>
+						<td>
+							<a href="#" class="btnGry">수정</a>
+							<a href="#" class="btnGry">URL</a>
+						</td>
+					</tr>
+					<!-- [D] : //기준상품 영역 -->
+					<tr>
+						<td><input type="checkbox" id="" class="cbox" name=""></td>
+						<td>1</td>
+						<td class="al">신규 / IPHONE XS_256G / 현대카드 신규 / IPHONE XS_256G / 현대카드 신규 / IPHONE XS_256G / 현대카드</td>
+						<td class="al">특가상품</td>
+						<td>2019-03-10</td>
+						<td>
+							<a href="#" class="btnGry">수정</a>
+							<a href="#" class="btnGry">삭제</a>
+							<a href="#" class="btnGry">URL</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="" class="cbox" name=""></td>
+						<td>2</td>
+						<td class="al">신규 / IPHONE XS_256G / 현대카드</td>
+						<td class="al">특가상품</td>
+						<td>2019-03-10</td>
+						<td>
+							<a href="#" class="btnGry">수정</a>
+							<a href="#" class="btnGry">삭제</a>
+							<a href="#" class="btnGry">URL</a>
+						</td>
+					</tr>
+					<tr>
+						<!-- [D] :  등록된 상품 내역이 없을때 노출 -->
+						<td colspan="6" class="noData">
+							<!-- ########## 수정(20190611) 시작 ########## -->
+							<a href="#" class="btnGry">전체상품등록</a>
+							<!-- ########## 수정(20190611) 끝 ########### -->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="pageNav">
+			<a href="#" class="first">«</a>
+			<a href="#" class="prev">&lt;</a>
+			<a href="#">1</a>
+			<span class="current">2</span>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#">10</a>
+			<a href="#" class="next">&gt;</a>
+			<a href="#" class="last">»</a>
+		</div>
+		<!-- Grid -->
+	</div>
+	<!-- container -->
+</div>
+<!-- content -->
+		
+<!-- 하단 -->
+<footer id="footer">
+	<div class="container">
+		<span id="brandSub"><img src="/web/admin/img/common/brand_sub.png" alt="SK telecom"></span>
+		<span class="copyright">
+			서울특별시 중구 을지로2가 11 / 대표이사 : 박정호 Copyright(c) 2013 by SK telecom. All Rights Reserved
+		</span>
+	</div>	
+</footer>
+<!-- //하단 -->
+
+</body>
+</html>

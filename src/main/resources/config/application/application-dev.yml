@@ -1,0 +1,41 @@
+spring:
+  datasource: #RDB 설정정보
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://deuk.iptime.org:23306/bootex?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=no
+    username: bootuser
+    password: xmsxms2
+  redis: #Redis 설정정보
+    host: localhost
+    port: 6379
+  session:
+    timeout: 600
+    store-type: redis
+    redis:
+      flush-mode: on_save
+      namespace: spring:session
+
+  #zipkin 설정
+#  sleuth:
+#    sampler:
+#      probability: 1.0  #기본값 0.1 , 샘플링 정의는 0~1(100%)
+#  zipkin:
+#    base-url: http://common-zipkin:9411/
+#    hikari:
+#      connection-timeout: 5000
+#      validation-timeout: 1000
+#      maximum-pool-size: 30
+#      minimum-idle: 2
+#      connection-test-query: SELECT 1
+logging:
+  level:
+    com.sktel.nscan: TRACE
+    jdbc.sqlonly: DEBUG
+    org.springframework.web: DEBUG
+    com.zaxxer.hikari.HikariDataSource: ERROR
+
+#Path
+icas:
+  icasLogDir: /data1/logs/icaslog/tgate
+  icasCpId: WPSM1222
+  icasCpPwd: 3c350fd1543f5de8
+  icasCpKey: b1aa654327a645e4a41243787c779e1d
