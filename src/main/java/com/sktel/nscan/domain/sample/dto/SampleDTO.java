@@ -16,6 +16,6 @@ public class SampleDTO {
     private long seq;
     private String title;
     private String content;
-    private Date creDt;
     private String creNm;
+    private Date creDt;
 }
