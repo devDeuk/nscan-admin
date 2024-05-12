@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"
+            });
+            $("#date3").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"
+            });
+            $("#date4").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li class="on"><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+
+            <h2 class="h_tit2">시스템 차단 일정 수정</h2>
+            <div class="cont_inner">
+                <table class="tbl_write">
+                    <colgroup>
+                        <col style="width:230px;">
+                        <col style="width:50%">
+                        <col style="width:230px;">
+                        <col style="width:50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>차단 대상</th>
+                            <td colspan="3">
+                                <input type="checkbox" name="" id="chk11" checked><label for="chk11">프론트</label>
+                                <input type="checkbox" name="" id="chk12"><label for="chk12">어드민</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>차단 시작일시</th>
+                            <td>
+                                <input type="text" name="date1" id="date1" class="calendar" readonly title="시작 날짜" style="width:145px;" />
+                                <select style="width:80px;">
+                                    <option>00시</option>
+                                    <option>00시</option>
+                                </select>
+                                <select style="width:80px;">
+                                    <option>00분</option>
+                                    <option>00분</option>
+                                </select>
+                            </td>
+                            <th>차단 종료일시</th>
+                            <td>
+                                <input type="text" name="date1" id="date2" class="calendar" readonly title="종료 날짜" style="width:145px;" />
+                                <select style="width:80px;">
+                                    <option>00시</option>
+                                    <option>00시</option>
+                                </select>
+                                <select style="width:80px;">
+                                    <option>00분</option>
+                                    <option>00분</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>메모</th>
+                            <td colspan="3"><textarea style="height:150px"></textarea></td>
+                        </tr>                        
+                        <tr>
+                            <th>사용 여부</th>
+                            <td colspan="3">
+                                <input type="radio" name="cc" id="chk21" checked><label for="chk21">사용</label>
+                                <input type="radio" name="cc" id="chk22"><label for="chk22">사용 안 함</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_wrap">
+                    <button class="btn line">목록</button>
+                    <div class="right">
+                        <button class="btn">저장</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

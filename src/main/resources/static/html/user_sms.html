@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li class="on"><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+
+            <h2 class="h_tit2">사용자 서식 신청 상세</h2>
+            <div class="cont_inner">
+                <h3 class="h_tit3 first">신청자 정보</h3>
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>신청서 종류</th>
+                            <td>[무선] 고객센터 전화해지 신청서</td>
+                            <th>상태</th>
+                            <td><span class="txt">제출완료</span><!--실패시 클래스 fail 추가 --></td>
+                        </tr>
+                        <tr>
+                            <th>SMS 발송일시</th>
+                            <td>YYYY-MM-DD HH:MM:SS</td>
+                            <th>신청서 제출일시</th>
+                            <td>YYYY-MM-DD HH:MM:SS</td>
+                        </tr>
+                        <tr>
+                            <th>고객명</th>
+                            <td>김이박</td>
+                            <th>신청구분</th>
+                            <td>대리인</td>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td>100101-3******</td>
+                            <th>연락처</th>
+                            <td>010-1234-1234</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="h_tit3">발송량 예외 요청 정보</h3>
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>발송량 해제 요청 번호</th>
+                            <td>010-1234-1234</td>
+                            <th>발송 희망 건수 (/일)</th>
+                            <td>1,000건</td>
+                        </tr>
+                        <tr>
+                            <th>발송 목적</th>
+                            <td>부고</td>
+                            <th>발송 기간</th>
+                            <td>2020. 11. 01 ~ 2020. 11. 03</td>
+                        </tr>
+                        <tr>
+                            <th>발송 내용</th>
+                            <td colspan="3">발송 내용이 표시됩니다.<br>발송 내용이 표시됩니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="h_tit3">대리인 정보</h3>
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                        <col style="width:260px;">
+                        <col style="width:calc(50% - 260px);">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>이름</th>
+                            <td>김부모</td>
+                            <th>본인과의 관계</th>
+                            <td>부</td>
+                        </tr>
+                        <tr>
+                            <th>대리인 생년월일</th>
+                            <td>800101-1******</td>
+                            <th>대리인 연락처</th>
+                            <td>010-3333-4444</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="h_tit3">제출 서류</h3>
+                <!-- 1203 -->
+                <table class="tbl_view2">
+                    <colgroup>
+                        <col style="width:12%;">
+                        <col style="width:19%;">
+                        <col style="width:19%;">
+                        <col style="width:19%;">
+                        <col style="width:19%;">
+                        <col style="width:12%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>필수 여부</th>
+                            <th>제출서류명</th>
+                            <th>제출서류코드</th>
+                            <th>CDG 전송 코드</th>
+                            <th>파일명</th>
+                            <th>제출상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>필수</td>
+                            <td>국회의원증 (의정활동)</td>
+                            <td>NATI_ASS_CARD</td>
+                            <td>10000000002</td>
+                            <td>가족관계증명서.jpg</td>
+                            <td><span class="txt">제출완료</span><!-- 실패시 클래스 fail 추가 --></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- //1203 -->
+
+                <div class="btn_wrap">
+                    <button class="btn line">목록</button>
+                </div>
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+            $("#date2").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+
+            //popup
+            $(".btn_close").on('click',function(){
+                $(this).parent().parent().hide();
+            });
+            $(".pop_close").on('click',function(){
+                $(this).parent().hide();
+            });            
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+            
+                <div class="mess_area">
+                    <div class="box">content area</div>
+                </div>
+                
+            
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>

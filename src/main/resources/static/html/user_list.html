@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOn:"button", 
+                buttonImage: "../images/bg_calendar.png"                
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li class="on"><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+            
+            <h2 class="h_tit2">사용자 서식 신청 내역</h2>
+            <div class="cont_inner">
+                <table class="tbl_write">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>신청서 종류</th>
+                            <td>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>처리상태</th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1" checked><label for="chk1">전체</label>
+                                <input type="radio" name="aa" id="chk2"><label for="chk2">제출완료</label>
+                                <input type="radio" name="aa" id="chk3"><label for="chk3">제출실패</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <div class="date_wrap">
+                                    <input type="text" name="date1" id="date1" class="calendar" title="시작 날짜" /> 
+                                    <span class="hyphen">~</span>
+                                    <input type="text" name="date2" id="date2" class="calendar" title="마지막 날짜" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>검색</th>
+                            <td>
+                                <select>
+                                    <option>고객명</option>
+                                </select>
+                                <input type="text" name="" id="" title="고객명" style="width:390px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bts_wrap">
+                    <button class="btn">조회</button>
+                </div>
+
+                <!-- 1203 -->
+                <div class="btn_left">
+                    <button class="btn line">엑셀다운로드</button>
+                </div>
+                <!-- //1203 -->         
+
+                <div class="list_wrap_scroll">
+                    <table class="tbl_list" style="min-width:1740px;">
+                        <colgroup>
+                            <col style="width:5%;">
+                            <col style="width:5%;">
+                            <col style="">
+                            <col style="width:8%;">
+                            <col style="width:10%;">
+                            <col style="width:8%;">
+                            <col style="width:15%;">
+                            <col style="width:8%;">
+                            <col style="width:15%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>구분</th>
+                                <th>신청서</th>
+                                <th>고객명</th>
+                                <th>고객전화번호</th>
+                                <th>처리상태</th>
+                                <th>신청서 작성일시</th>
+                                <th>담당 상담원</th>
+                                <th>SMS 발송일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="9" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr onClick="location.href='user_custom.html'">
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>무선</td>
+                                <td class="left">고객센터 전화해지 신청서</td>
+                                <td>김이박</td>
+                                <td>010-1234-1234</td>
+                                <td>제출완료</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>상담원A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paging">
+                    <a href="javascript:;" class="first">처음 페이지로 이동</a>
+                    <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+                    <strong>1</strong> 
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+                    <a href="javascript:;">6</a>
+                    <a href="javascript:;">7</a>
+                    <a href="javascript:;">8</a>
+                    <a href="javascript:;">9</a>
+                    <a href="javascript:;">10</a>
+                    <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+                    <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+                </div>
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

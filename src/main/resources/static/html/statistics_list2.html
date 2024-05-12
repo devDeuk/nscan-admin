@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li class="on"><a href="#">서식지별 통계</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+            
+            <h2 class="h_tit2">서식지별 통계</h2>
+            <div class="cont_inner">
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:;">
+                    </colgroup>
+                    <tbody>
+                        <!-- 1203 -->
+                        <tr>
+                            <th>통계 종류</th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1"><label for="chk1">접속 및 제출 통계</label>
+                                <input type="radio" name="aa" id="chk2" checked><label for="chk2">증빙 서류 통계</label>
+                            </td>
+                        </tr>
+                        <!-- //1203 -->
+                        <tr>
+                            <th>신청서 종류</th>
+                            <td>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!--tr>
+                            <th>출력 방법</th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1"><label for="chk1">일자별</label>
+                                <input type="radio" name="aa" id="chk2" checked><label for="chk2">구간 합계</label>
+                            </td>
+                        </tr-->
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <input type="text" name="date1" id="date1" class="calendar" readonly title="시작 날짜" />
+                                <span class="hyphen">~</span>
+                                <input type="text" name="date1" id="date2" class="calendar" readonly title="종료 날짜" />
+                                <a href="#" class="bts">오늘</a>
+                                <a href="#" class="bts">어제</a>
+                                <a href="#" class="bts">최근7일</a>
+                                <a href="#" class="bts">최근30일</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="bts_wrap">
+                    <button class="btn">조회</button>
+                </div>
+
+                <!-- 1203 -->
+                <div class="btn_left">
+                    <button class="btn line">엑셀다운로드</button>
+                </div>
+                <!-- //1203 -->
+
+                <div class="list_wrap_scroll">
+                    <!-- 1203 -->
+                    <table class="tbl_list">
+                        <colgroup>
+                            <col style="width:15%;">
+                            <col style="width:17%">
+                            <col style="width:18%">
+                            <col style="width:10%;">
+                            <col style="width:10%;">
+                            <col style="width:10%;">
+                            <col style="width:10%;">
+                            <col style="width:10%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>증빙 서류 코드</th>
+                                <th>증빙 서류명</th>
+                                <th>제출합계</th>
+                                <th colspan="2">제출 완료 (%)</th>
+                                <th colspan="2">제출 실패 (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr>
+                                <td>2020-11-01</td>
+                                <td class="left">OCR</td>
+                                <td class="left">명의자신분증</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr>
+                                <td>2020-11-01</td>
+                                <td class="left">AGNT_OCR</td>
+                                <td class="left">대리인신분증</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr class="bg">
+                                <td>2020-11-01</td>
+                                <td class="left">합계</td>
+                                <td class="left"></td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                    
+                    <!-- 특정 신청서 선택시 -->
+                    <table class="tbl_list">
+                        <colgroup>
+                            <col style="">
+                            <col style="width:17%;">
+                            <col style="width:17%;">
+                            <col style="width:17%;">
+                            <col style="width:17%;">
+                            <col style="width:17%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>제출 합계</th>
+                                <th colspan="2">제출 완료 (%)</th>
+                                <th colspan="2">제출 실패 (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr>
+                                <td>2020-11-01</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr>
+                                <td>2020-11-01</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>
+                            <tr class="bg">
+                                <td>합계</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>90%</td>
+                                <td>8</td>
+                                <td>9%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- //특정 신청서 선택시 -->
+                    <!-- //1203 -->
+                </div>
+                <div class="paging">
+                    <a href="javascript:;" class="first">처음 페이지로 이동</a>
+                    <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+                    <strong>1</strong> 
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+                    <a href="javascript:;">6</a>
+                    <a href="javascript:;">7</a>
+                    <a href="javascript:;">8</a>
+                    <a href="javascript:;">9</a>
+                    <a href="javascript:;">10</a>
+                    <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+                    <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+                </div>
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

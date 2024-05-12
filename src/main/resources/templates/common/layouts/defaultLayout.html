@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--라이브러리 참조 : Thymeleaf & Thymeleaf Layout -->
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!--공통 JS / CSS 영역을 관리하는 환경 영역-->
+<head th:replace="common/fragments/config :: ConfigFragment">
+    <title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">N-Scan 장애관리 시스템</title>
+</head>
+
+<body>
+<div id="dvwrap">
+    <div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+    <!-- container -->
+    <div id="container">
+        <!--LeftMenu 영역을 참조합니다.-->
+        <div th:replace="common/fragments/leftmenu :: LeftMenuFragment"></div>
+
+        <!--Content 내용 영역을 참조합니다-->
+        <th:block layout:fragment="Content"></th:block>
+    </div>
+    <!-- /container -->
+</div>
+
+</body>
+</html>
+
+
+
+
+

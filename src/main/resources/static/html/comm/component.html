@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../css/doc_admin.css" />
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../../images/bg_calendar.png"
+            });
+        });
+    </script>
+<style>
+    body {padding:0 20px;}
+#container .contents {margin:0;  width:1200px;}       
+.cont_inner {}
+.tt {margin-top:40px; display:block; font-size:30px; font-weight:bold;}
+.tt:first-child {margin-top:20px;}
+.tts {margin-top:20px; display:inline-block; font-size:18px; font-weight:normal; padding:5px 10px; color:#666;  background:#e9e9e9;}
+.tts + * {margin-top:20px;}
+.scont {}
+</style>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+
+        <div id="contents" class="contents">
+            <!-- content -->
+            <strong class="tt">Title</strong>
+            <em class="tts">Top title</em>
+            <h2 class="h_tit2">공지사항</h2>
+
+            <em class="tts">Sub title</em>
+            <h3 class="h_tit3" style="margin-top:20px;">공지사항</h3>
+                        
+            <strong class="tt">Board</strong>
+            <em class="tts">List</em>
+            <div class="cont_inner">
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>게시 상태</th>
+                            <td>
+                                <input type="radio" name="aaa" id="chk1" checked><label for="chk1">전체</label>
+                                <input type="radio" name="aaa" id="chk2"><label for="chk2">게시 중</label>
+                                <input type="radio" name="aaa" id="chk3"><label for="chk3">게시 취소</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>검색</th>
+                            <td>
+                                <select>
+                                    <option>제목</option>
+                                </select>
+                                <input type="text" name="" id="" title="제목" style="width:390px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="list_wrap_scroll">
+                    <table class="tbl_list" style="min-width:1500px;">
+                        <colgroup>
+                            <col style="width:5%;">
+                            <col style="">
+                            <col style="width:8%;">
+                            <col style="width:10%;">
+                            <col style="width:8%;">
+                            <col style="width:20%;">
+                            <col style="width:15%;">
+                            <col style="width:7%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>팝업노출</th>
+                                <th>게시 상태</th>
+                                <th>게시 기간</th>
+                                <th>작성일시</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr onClick="location.href='board_view.html'">
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>팝업 표시 안 함</td>
+                                <td>노출</td>
+                                <td>YYYY-MM-DD ~ YYYY-MM-DD</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <em class="tts">View</em>
+            <div class="cont_inner">
+                <table class="tbl_view wide">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:43%">
+                        <col style="width:180px;">
+                        <col style="width:57%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제목</th>
+                            <td colspan="3">어드민 사용법 안내</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td colspan="3">
+                                안녕하세요.<br>
+                                어드민 사용법 안내에 대해 공지합니다.<br><br>
+                                사용법은 다음과 같습니다.<br><br><br>
+                                감사합니다.<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th>
+                            <td>담당자A</td>
+                            <th>작성일시</th>
+                            <td>YYYY-MM-DD HH:MM:SS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <em class="tts">Write</em>
+            <div class="cont_inner">
+                <table class="tbl_write">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:43%">
+                        <col style="width:180px;">
+                        <col style="width:57%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제목 <span class="required">*</span></th>
+                            <td colspan="3"><input type="text" placeholder="" title="제목" style="width:100%;" /></td>
+                        </tr>
+                        <tr>
+                            <th>내용 <span class="required">*</span></th>
+                            <td colspan="3"><textarea style="height:80px"></textarea></td>
+                        </tr>                        
+                        <tr>
+                            <th>게시 상태 <span class="required">*</span></th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1" checked><label for="chk1">노출</label>
+                                <input type="radio" name="aa" id="chk2"><label for="chk2">미노출</label>
+                            </td>
+                            <th>게시 기간</th>
+                            <td>
+                                <div class="date_wrap">
+                                    <input type="text" name="date1" id="date1" class="calendar" readonly title="시작 날짜" />
+                                    <span class="hyphen">~</span>
+                                    <input type="text" name="date2" id="date2" class="calendar" readonly title="마지막 날짜" />
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <strong class="tt">Paging</strong>
+            <div class="scont">
+                <div class="paging">
+                    <a href="javascript:;" class="first">처음 페이지로 이동</a>
+                    <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+                    <strong>1</strong> 
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+                    <a href="javascript:;">6</a>
+                    <a href="javascript:;">7</a>
+                    <a href="javascript:;">8</a>
+                    <a href="javascript:;">9</a>
+                    <a href="javascript:;">10</a>
+                    <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+                    <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+                </div>
+            </div>
+
+
+            <strong class="tt">Button</strong>
+            <em class="tts">Style</em>
+            <div class="scont">
+                <button class="btn">목록</button>
+                <button class="btn line">목록</button>
+            </div>
+
+            <em class="tts">left 정렬</em>
+            <div class="btn_wrap">
+                <button class="btn line">목록</button>
+            </div>
+
+            <em class="tts">right 정렬</em>
+            <div class="bts_wrap">
+                <button class="btn">조회</button>
+            </div>
+
+            <em class="tts">양쪽 정렬</em>
+            <div class="btn_wrap">
+                <button class="btn line">목록</button>
+                <div class="right">
+                    <button class="btn">저장</button>
+                </div>
+            </div>
+
+            <strong class="tt">Form Type</strong>
+            <em class="tts">input="text" / "password"</em>
+            <div class="scont">
+                <input type="text" placeholder="text" title="제목" />
+                <input type="text" placeholder="disabled" title="제목" disabled />
+            </div>
+
+            <em class="tts">textarea</em>
+            <div class="scont">
+                <textarea style="height:80px"></textarea>
+            </div>
+
+            <em class="tts">select</em>
+            <div class="scont">
+                <select>
+                    <option>제목</option>
+                    <option>제목</option>
+                    <option>제목</option>
+
+                </select>
+            </div>
+
+            <em class="tts">input type="radio"</em>
+            <div class="scont">
+                <input type="radio" name="aa" id="chk21" checked><label for="chk21">전체</label>
+                <input type="radio" name="aa" id="chk22"><label for="chk22">게시 중</label>
+            </div>
+
+            <em class="tts">input type="checkbox"</em>
+            <div class="scont">
+                <input type="checkbox" name="bb" id="chk11" checked><label for="chk11">전체</label>
+                <input type="checkbox" name="bb" id="chk12"><label for="chk12">게시 중</label>
+            </div>
+
+            <br><br>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+

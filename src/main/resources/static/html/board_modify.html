@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li class="on"><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+
+            <h2 class="h_tit2">공지사항 수정</h2>
+            <div class="cont_inner">
+                <table class="tbl_write">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:43%">
+                        <col style="width:180px;">
+                        <col style="width:57%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제목 <span class="required">*</span></th>
+                            <td colspan="3"><input type="text" placeholder="" title="제목" style="width:100%;" /></td>
+                        </tr>
+                        <tr>
+                            <th>내용 <span class="required">*</span></th>
+                            <td colspan="3"><textarea style="height:300px"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th>
+                            <td>담당자A</td>
+                            <th>작성일시</th>
+                            <td>YYYY-MM-DD HH:MM:SS</td>
+                        </tr>
+                        <tr>
+                            <th>최종 수정자</th>
+                            <td>-</td>
+                            <th>최종 수정일시</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>게시 상태 <span class="required">*</span></th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1" checked><label for="chk1">노출</label>
+                                <input type="radio" name="aa" id="chk2"><label for="chk2">미노출</label>
+                            </td>
+                            <th>게시 기간</th>
+                            <td>
+                                <div class="date_wrap">
+                                    <input type="text" name="date1" id="date1" class="calendar" readonly title="시작 날짜" />
+                                    <span class="hyphen">~</span>
+                                    <input type="text" name="date2" id="date2" class="calendar" readonly title="마지막 날짜" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>팝업 노출 <span class="required">*</span></th>
+                            <td colspan="3">
+                                <input type="radio" name="bb" id="chk11" checked><label for="chk11">팝업 표시</label>
+                                <input type="radio" name="bb" id="chk12"><label for="chk12">팝업 표시 안 함</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_wrap">
+                    <button class="btn line">목록</button>
+                    <div class="right">
+                        <button class="btn">저장</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

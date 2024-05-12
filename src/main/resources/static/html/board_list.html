@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        // 1216추가
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+            $("#date2").datepicker({
+                dateFormat:"yy-mm-dd",
+                showOn:"button", 
+                buttonImage:"../images/bg_calendar.png"
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li class="on"><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+            
+            <h2 class="h_tit2">공지사항</h2>
+            <div class="cont_inner">
+                <table class="tbl_view">
+                    <colgroup>
+                        <col style="width:260px;">
+                        <col style="width:;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>게시 상태</th>
+                            <td>
+                                <input type="radio" name="aa" id="chk1" checked><label for="chk1">전체</label>
+                                <input type="radio" name="aa" id="chk2"><label for="chk2">노출</label>
+                                <input type="radio" name="aa" id="chk3"><label for="chk3">비노출</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>팝업 노출</th>
+                            <td>
+                                <input type="radio" name="bb" id="chk11" checked><label for="chk11">전체</label>
+                                <input type="radio" name="bb" id="chk12"><label for="chk12">팝업 표시</label>
+                                <input type="radio" name="bb" id="chk13"><label for="chk13">팝업 표시 안 함</label>
+                            </td>
+                        </tr>
+                        <!-- 1216추가 -->
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <div class="date_wrap">
+                                    <input type="text" name="date1" id="date1" class="calendar" readonly title="시작 날짜" />
+                                    <span class="hyphen">~</span>
+                                    <input type="text" name="date2" id="date2" class="calendar" readonly title="마지막 날짜" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- //1216추가 -->
+                        <tr>
+                            <th>검색</th>
+                            <td>
+                                <select>
+                                    <option>제목</option>
+                                </select>
+                                <input type="text" name="" id="" title="제목" style="width:390px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bts_wrap">
+                    <button class="btn">조회</button>
+                </div>
+
+                <div class="btn_write">
+                    <button class="btn line">공지사항 작성</button>
+                </div>
+                <div class="list_wrap_scroll">
+                    <table class="tbl_list" style="min-width:1500px;">
+                        <colgroup>
+                            <col style="width:5%;">
+                            <col style="">
+                            <col style="width:8%;">
+                            <col style="width:10%;">
+                            <col style="width:8%;">
+                            <col style="width:20%;">
+                            <col style="width:15%;">
+                            <col style="width:7%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>팝업노출</th>
+                                <th>게시 상태</th>
+                                <th>게시 기간</th>
+                                <th>작성일시</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr onClick="location.href='board_view.html'">
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>팝업 표시 안 함</td>
+                                <td>노출</td>
+                                <td>YYYY-MM-DD ~ YYYY-MM-DD</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>팝업 표시 안 함</td>
+                                <td>노출</td>
+                                <td>YYYY-MM-DD ~ YYYY-MM-DD</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>팝업 표시 안 함</td>
+                                <td>노출</td>
+                                <td>YYYY-MM-DD ~ YYYY-MM-DD</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>팝업 표시 안 함</td>
+                                <td>노출</td>
+                                <td>YYYY-MM-DD ~ YYYY-MM-DD</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 1216 -->
+                    <table class="tbl_list">
+                        <colgroup>
+                            <col style="width:5%;">
+                            <col style="">
+                            <col style="width:8%;">
+                            <col style="width:15%;">
+                            <col style="width:7%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일시</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                            </tr>
+                            <tr onClick="location.href='board_view.html'">
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td class="left"><span class="txt">어드민 사용법 안내</span></td>
+                                <td>담당자A</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- //1216 -->
+                </div>
+                <div class="paging">
+                    <a href="javascript:;" class="first">처음 페이지로 이동</a>
+                    <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+                    <strong>1</strong> 
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+                    <a href="javascript:;">6</a>
+                    <a href="javascript:;">7</a>
+                    <a href="javascript:;">8</a>
+                    <a href="javascript:;">9</a>
+                    <a href="javascript:;">10</a>
+                    <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+                    <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+                </div>
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

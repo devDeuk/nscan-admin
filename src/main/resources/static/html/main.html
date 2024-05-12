@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#date1").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+            $("#date2").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+
+            //popup
+            $(".btn_close").on('click',function(){
+                $(this).parent().parent().hide();
+            });
+            $(".pop_close").on('click',function(){
+                $(this).parent().hide();
+            });            
+        });
+    </script>
+</head>
+<body>
+<div id="dvwrap">
+	<div id="skip"><a href="#contents">본문내용 바로가기</a></div>
+	<!-- container -->
+	<div id="container">
+        <div class="lnb">
+            <h1><a href="#">구비서류 제출시스템</a></h1>
+            <ul class="lnbs">
+                <li><a href="#">신청서 종류</a></li>
+                <li><a href="#">사용자 서식 조회</a></li>
+                <li><a href="#">서식지별 통계</a></li>
+                <li class="on"><a href="#">공지사항</a></li>
+                <li><a href="#">공통 코드 관리</a></li>
+                <li><a href="#">시스템 차단 관리</a></li>
+            </ul>
+        </div>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+            <div class="mian_inner">
+                <h2 class="m_tit">오늘의 현황</h2>
+                <div class="total_wrap">
+                    <div class="item">
+                        <em>전체 등록 건수</em>
+                        <span>100</span>
+                    </div>
+                    <div class="item">
+                        <em>전송완료 건수</em>
+                        <span>80</span>
+                    </div>
+                    <div class="item">
+                        <em>전송실패 건수</em>
+                        <span>20</span>
+                    </div>
+                    <div class="item"><!-- 1221 추가 -->
+                        <em>미전송 건수</em>
+                        <span>20</span>
+                    </div>
+                </div>
+
+                <div class="mcont_wrap">
+                    <div class="part">
+                        <h2 class="m_tit">상담사별 통계</h2>
+                        <table class="mcont_list none"><!-- 1119 hover시 없음 -->
+                            <colgroup>
+                                <col style="width:40%;">
+                                <col style="width:20%;">
+                                <col style="width:20%;">
+                                <col style="width:20%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>상담사</th>
+                                    <th>전체</th>
+                                    <th>전송완료</th>
+                                    <th>전송실패</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>상담사A</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="m_tit">공지사항</h2>
+                        <table class="mcont_list">
+                            <colgroup>
+                                <col style="width:42%;">
+                                <col style="width:20%;">
+                                <col style="width:24%;">
+                                <col style="width:14%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="left">제목</th>
+                                    <th>작성자</th>
+                                    <th>작성일시</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onClick="location.href='board_view.html'">
+                                    <td class="left"><p class="txt">어드민 사용법 안내 어드민 사용법 안내 어드민 사용법 안내</p></td>
+                                    <td>담당자A</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td class="left"><p class="txt">어드민 사용법 안내</p></td>
+                                    <td>담당자A</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td class="left"><p class="txt">어드민 사용법 안내</p></td>
+                                    <td>담당자A</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td class="left"><p class="txt">어드민 사용법 안내</p></td>
+                                    <td>담당자A</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td class="left"><p class="txt">어드민 사용법 안내</p></td>
+                                    <td>담당자A</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="part">
+                        <h2 class="m_tit">신청서별 등록 현황</h2>
+                        <p class="txt_right">전송완료된 항목만 집계됩니다.</p>
+                        <table class="mcont_list">
+                            <colgroup>
+                                <col style="width:85%;">
+                                <col style="width:15%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="left">신청서</th>
+                                    <th>건수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onClick="location.href='user_list.html'">
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">[무선] 고객센터 전화해지 신청서</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- //content -->
+		</div>
+    </div>
+    <!-- /container -->
+
+	<!-- pop_layer -->
+	<div class="popup_wrap three" style="display:none;"><!-- 팝업개수따라 변경 (1개일때 one/2개일때 two/3개일때 three) -->
+        <div class="pop_item">
+            <!-- pcont -->
+            <div class="popup_area">
+                <strong class="pop_tit">공지사항</strong>
+                <div class="pop_cont">
+                    <em class="ptit">공지사항의 제목이 표시됩니다</em>
+                    <div class="pcont">
+                        안녕하세요.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        감사합니다.<br>
+                    </div>
+                </div>
+                <div class="pop_btm">
+                    <input type="checkbox" id="aa"><label for="aa">오늘 하루 보지 않기</label>
+                    <a href="javascript:;" class="btn_close">닫기</a>
+                </div>
+                <a href="javascript:;" class="pop_close">닫기</a>
+            </div>
+            <!-- //pcont -->
+            <!-- 2pcont -->
+            <div class="popup_area">
+                <strong class="pop_tit">공지사항</strong>
+                <div class="pop_cont">
+                    <em class="ptit">공지사항의 제목이 표시됩니다</em>
+                    <div class="pcont">
+                        안녕하세요.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        감사합니다.<br>
+                    </div>
+                </div>
+                <div class="pop_btm">
+                    <input type="checkbox" id="aa"><label for="aa">오늘 하루 보지 않기</label>
+                    <a href="javascript:;" class="btn_close">닫기</a>
+                </div>
+                <a href="javascript:;" class="pop_close">닫기</a>
+            </div>
+            <!-- //2pcont -->
+            <!-- 3pcont -->
+            <div class="popup_area">
+                <strong class="pop_tit">공지사항</strong>
+                <div class="pop_cont">
+                    <em class="ptit">공지사항의 제목이 표시됩니다</em>
+                    <div class="pcont">
+                        안녕하세요.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        공지사항 내용이 표시됩니다. 내용이 길 경우 스크롤바도 표시됩니다.<br>
+                        감사합니다.<br>
+                    </div>
+                </div>
+                <div class="pop_btm">
+                    <input type="checkbox" id="aa"><label for="aa">오늘 하루 보지 않기</label>
+                    <a href="javascript:;" class="btn_close">닫기</a>
+                </div>
+                <a href="javascript:;" class="pop_close">닫기</a>
+            </div>
+            <!-- //3pcont -->
+        </div>
+    </div>
+    <!-- //pop_layer -->
+</div>
+
+</body>
+</html>

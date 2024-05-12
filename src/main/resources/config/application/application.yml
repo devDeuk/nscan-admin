@@ -14,16 +14,25 @@ server:
 
 spring:
   application:
-    name: deuk-lab
+    name: nscan-admin
   profiles:
     active: local
+#  jsp적용시
   mvc:
-    view:
-      prefix: /WEB-INF/jsp/
-      suffix: .jsp
-      static-path-pattern: /resources/**
+#    view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
+#      static-path-pattern: /resources/**
     pathmatch:
       matching-strategy: ant_path_matcher #swagger3 적용을 위한 설정
+# thymeleaf
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+    enabled: true
+    encoding: UTF-8
   message:
     basename: classpath:/messages/message
     cache-duration: 60

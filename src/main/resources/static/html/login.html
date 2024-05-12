@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>구비서류 제출시스템 Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/doc_admin.css" />
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.sms_go').click(function(){		
+            $('.step1').hide();
+            $('.step2').show();
+        });
+
+        // //id
+        // $(".ids").focusout(function() {
+        //     if ($(".ids").val() == '') {
+        //         $(".ids").removeClass("on");
+        //     } else {
+        //        $(".ids").addClass("on");
+        //     }
+        // });
+        // $(".ids").focusin(function() {
+        //     $(".ids").addClass("on");
+        // });
+        
+        // //pw
+        // $(".pws").focusout(function() {
+        //     if ($(".pws").val() == '') {
+        //         $(".pws").removeClass("on");
+        //     } else {
+        //        $(".pws").addClass("on");
+        //     }
+        // });
+        // $(".pws").focusin(function() {
+        //     $(".pws").addClass("on");
+        // });        
+    });
+    </script>
+</head>
+<body class="login">
+<div id="dvwrap">
+    <div class="login_wrap">
+        <h1 class="logo">sk logo</h1>
+        <div class="login_inner">
+            <div class="login_cont">
+                <strong class="tit">SK텔레콤<br>구비서류 제출시스템</strong>
+
+                <div class="step1">
+                    <em class="tits">로그인</em>
+                    <ul class="logins">
+                        <li><input class="ids" type="text" placeholder="아이디" title="아이디"></li>
+                        <li><input class="pws" type="password" placeholder="비밀번호" title="비밀번호"></li>
+                    </ul>
+                    <div class="login_btn">
+                        <a href="#" class="sms_go">로그인</a>
+                    </div>
+                    <ul class="txts">
+                        <li>SWING 계정으로 로그인해 주세요.</li>
+                        <li>계정 생성, 아이디/비밀번호 찾기는 <a href="#">SWING</a>에서 하실 수 있습니다.</li>
+                    </ul>
+                </div>
+
+                <div class="step2" style="display:none;">
+                    <em class="tits">SMS 2단계 인증</em>
+                    <p class="txt">등록된 휴대폰 번호(010-1234-5678)로 <br>인증번호가 발송되었습니다.<br>아래 입력란에 <span>3:00</span> 이내로 인증번호를 입력하세요.</p>
+                    <div class="login_sms">
+                        <input type="text" placeholder="인증번호" title="인증번호">
+                        <a href="#">인증번호 재전송</a>
+                    </div>
+                    <div class="login_btn">
+                        <a href="#">확인</a>
+                    </div>
+                    <ul class="txts">
+                        <li>통신사 사정에 따라 SMS 전송에 다소 시간이 걸릴 수 있습니다.</li>
+                        <li>1분 이내에 인증문자가 수신되지 않을 경우<br> 재시도해 주시기 바랍니다. </li>
+                        <li>휴대폰 번호의 변경을 원하시면 관리자에게 요청해주세요.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

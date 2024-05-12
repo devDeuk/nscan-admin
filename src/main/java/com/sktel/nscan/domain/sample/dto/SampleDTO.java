@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 
@@ -17,5 +18,5 @@ public class SampleDTO {
     private String title;
     private String content;
     private String creNm;
-    private Date creDt;
+    private LocalDateTime creDt;
 }
