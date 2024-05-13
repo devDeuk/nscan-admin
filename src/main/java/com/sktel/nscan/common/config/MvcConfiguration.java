@@ -21,7 +21,7 @@ public class MvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new CheckRequestInterceptor())
-                .excludePathPatterns("/html/**", "/web/**", "/WebCube/**" );
+                .excludePathPatterns("/html/**","/css/**", "/js/**", "/images/**", "/web/**", "/WebCube/**","/favicon.ico" );
     }
 
 

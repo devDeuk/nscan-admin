@@ -7,12 +7,12 @@
 <div class="lnb">
     <h1><a href="#">구비서류 제출시스템</a></h1>
     <ul class="lnbs">
-        <li><a href="#">신청서 종류</a></li>
-        <li><a href="#">사용자 서식 조회</a></li>
-        <li><a href="#">서식지별 통계</a></li>
-        <li class="on"><a href="#">공지사항</a></li>
-        <li><a href="#">공통 코드 관리</a></li>
-        <li><a href="#">시스템 차단 관리</a></li>
+        <li th:classappend="${basepath == 'sample1'}?'on'"><a href="#">신청서 종류<span th:text="${basepath}"></span></a></li>
+        <li th:classappend="${basepath == 'sample2'}?'on'"><a href="#">사용자 서식 조회</a></li>
+        <li th:classappend="${basepath == 'sample3'}?'on'"><a href="#">서식지별 통계</a></li>
+        <li th:classappend="${basepath == 'sample4'}?'on'"><a href="#">공지사항</a></li>
+        <li th:classappend="${basepath == 'sample5'}?'on'"><a href="#">공통 코드 관리</a></li>
+        <li th:classappend="${basepath == 'sample6'}?'on'"><a href="#">시스템 차단 관리</a></li>
     </ul>
 </div>
 </html>

@@ -32,13 +32,12 @@
     </logger>
 
 
-    <logger name="com.skcc.template" additivity="false" level="DEBUG">
+    <logger name="com.sktel.nscan" additivity="false" level="INFO">
         <appender-ref ref="CONSOLE" />
     </logger>
 
 
-    <root>
-        <level value="INFO" />
+    <root level="WARN">
         <appender-ref ref="CONSOLE" />
     </root>
 

@@ -1,0 +1,103 @@
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/defaultLayout}"
+      layout:fragment="Content"
+>
+<head>
+    <title>테스트 페이지</title>
+</head>
+
+<body>
+<div id="contents" class="contents">
+    <!-- content -->
+    <div class="my_area">
+        <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+        <a href="#" class="logout">로그아웃</a>
+    </div>
+
+    <h2 class="h_tit2">codeList</h2>
+</div>
+
+
+<div class="list_wrap_scroll">
+    <!-- 특정 신청서 선택시 -->
+    <table class="tbl_list">
+        <colgroup>
+            <col style="">
+            <col style="width:17%;">
+            <col style="width:11%;">
+            <col style="width:11%;">
+            <col style="width:11%;">
+            <col style="width:11%;">
+            <col style="width:11%;">
+            <col style="width:11%;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>날짜</th>
+            <th>합계</th>
+            <th colspan="2">제출 완료 (%)</th>
+            <th colspan="2">제출 실패 (%)</th>
+            <th colspan="2">미전송 (%)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="8" class="no_result"><span>검색 결과가 없습니다.</span></td>
+        </tr>
+        <tr>
+            <td>2020-11-01</td>
+            <td>100</td>
+            <td>80</td>
+            <td>90%</td>
+            <td>8</td>
+            <td>9%</td>
+            <td>8</td>
+            <td>9%</td>
+        </tr>
+        <tr>
+            <td>2020-11-01</td>
+            <td>100</td>
+            <td>80</td>
+            <td>90%</td>
+            <td>8</td>
+            <td>9%</td>
+            <td>8</td>
+            <td>9%</td>
+        </tr>
+        <tr class="bg">
+            <td>구간 합계</td>
+            <td>100</td>
+            <td>80</td>
+            <td>90%</td>
+            <td>8</td>
+            <td>9%</td>
+            <td>8</td>
+            <td>9%</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- //특정 신청서 선택시 -->
+    <!-- //1223 -->
+</div>
+<div class="paging">
+    <a href="javascript:;" class="first">처음 페이지로 이동</a>
+    <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+    <strong>1</strong>
+    <a href="javascript:;">2</a>
+    <a href="javascript:;">3</a>
+    <a href="javascript:;">4</a>
+    <a href="javascript:;">5</a>
+    <a href="javascript:;">6</a>
+    <a href="javascript:;">7</a>
+    <a href="javascript:;">8</a>
+    <a href="javascript:;">9</a>
+    <a href="javascript:;">10</a>
+    <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+    <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+</div>
+</div>
+<!-- //content -->
+</body>
+</html>

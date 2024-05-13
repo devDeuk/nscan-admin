@@ -44,7 +44,7 @@ spring:
 
 logging:
   level:
-    com.sktel.nscan: TRACE
+    com.sktel.nscan: INFO
     jdbc.sqlonly: DEBUG
     org.springframework.web: DEBUG
     com.zaxxer.hikari.HikariDataSource: ERROR
