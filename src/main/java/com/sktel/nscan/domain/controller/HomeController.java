@@ -1,4 +1,4 @@
-package com.sktel.nscan.domain;
+package com.sktel.nscan.domain.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

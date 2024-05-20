@@ -1,6 +1,6 @@
 package com.sktel.nscan.domain.sample.service;
 
-import com.sktel.nscan.port.service.SampleSessionService;
+import com.sktel.nscan.port.service.sample.SampleSessionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;

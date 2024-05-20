@@ -5,7 +5,7 @@ import com.sktel.nscan.common.error.ErrorCode;
 import com.sktel.nscan.common.error.exception.BizException;
 import com.sktel.nscan.domain.sample.dto.SampleDTO;
 import com.sktel.nscan.port.redis.SampleRedisRepository;
-import com.sktel.nscan.port.service.SampleRedisServie;
+import com.sktel.nscan.port.service.sample.SampleRedisServie;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

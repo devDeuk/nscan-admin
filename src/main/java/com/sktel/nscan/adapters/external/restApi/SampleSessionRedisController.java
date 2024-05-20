@@ -1,6 +1,6 @@
 package com.sktel.nscan.adapters.external.restApi;
 
-import com.sktel.nscan.port.service.SampleSessionService;
+import com.sktel.nscan.port.service.sample.SampleSessionService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

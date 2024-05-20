@@ -1,0 +1,142 @@
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/defaultLayout}"
+      layout:fragment="Content"
+>
+<head>
+    <title>테스트 페이지</title>
+</head>
+
+<body>
+<div id="contents" class="contents">
+    <!-- content -->
+    <div class="my_area">
+        <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+        <a href="#" class="logout">로그아웃</a>
+    </div>
+
+    <h2 class="h_tit2">공통 코드 관리</h2>
+    <div class="cont_inner">
+        <table class="tbl_view">
+            <colgroup>
+                <col style="width:260px;">
+                <col style="width:*;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>사용 여부</th>
+                <td>
+                    <input type="radio" name="aa" id="chk1" checked><label for="chk1">전체</label>
+                    <input type="radio" name="aa" id="chk2"><label for="chk2">사용</label>
+                    <input type="radio" name="aa" id="chk3"><label for="chk3">사용 안 함</label>
+                </td>
+            </tr>
+            <tr>
+                <th>검색</th>
+                <td>
+                    <select>
+                        <option>선택</option>
+                        <option>대분류코드</option>
+                        <option>대분류명</option>
+                        <option>코드</option>
+                    </select>
+                    <input type="text" name="" id="" title="코드ID" style="width:390px;" />
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="bts_wrap">
+            <button class="btn">조회</button>
+        </div>
+
+        <div class="btn_write">
+            <button class="btn line">코드 추가</button>
+        </div>
+        <div class="list_wrap_scroll">
+            <table class="tbl_list" style="min-width:1600px;">
+                <colgroup>
+                    <col style="width:11%;">
+                    <col style="width:9%;">
+                    <col style="width:22%;">
+                    <col style="width:18%;">
+                    <col style="width:5%;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:13%;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>대분류코드</th>
+                    <th>코드</th>
+                    <th>코드명</th>
+                    <th>코드설명</th>
+                    <th>레벨</th>
+                    <th>정렬순서</th>
+                    <th>사용여부</th>
+                    <th>생성자</th>
+                    <th>생성일시</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="9" class="no_result"><span>검색 결과가 없습니다.</span></td>
+                </tr>
+                <tr onClick="location.href='/code/view'">
+                    <td>신청자 구분</td>
+                    <td>A0001</td>
+                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
+                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>사용</td>
+                    <td>담당자이름</td>
+                    <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                    <td>신청자 구분</td>
+                    <td>A0001</td>
+                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
+                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>사용</td>
+                    <td>담당자이름</td>
+                    <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                    <td>신청자 구분</td>
+                    <td>A0001</td>
+                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
+                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>사용</td>
+                    <td>담당자이름</td>
+                    <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="paging">
+            <a href="javascript:;" class="first">처음 페이지로 이동</a>
+            <a href="javascript:;" class="prev">이전 10페이지로 이동</a>
+            <strong>1</strong>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+            <a href="javascript:;">4</a>
+            <a href="javascript:;">5</a>
+            <a href="javascript:;">6</a>
+            <a href="javascript:;">7</a>
+            <a href="javascript:;">8</a>
+            <a href="javascript:;">9</a>
+            <a href="javascript:;">10</a>
+            <a href="javascript:;" class="next">다음 10페이지로 이동</a>
+            <a href="javascript:;" class="last">마지막 페이지로 이동</a>
+        </div>
+    </div>
+    <!-- //content -->
+</body>
+</html>

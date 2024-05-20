@@ -1,4 +1,4 @@
-package com.sktel.nscan.port.service;
+package com.sktel.nscan.port.service.sample;
 
 import com.sktel.nscan.adapters.database.Sample;
 import com.sktel.nscan.domain.sample.dto.SampleDTO;

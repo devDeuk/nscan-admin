@@ -12,9 +12,9 @@ spring:
     #driverClassName: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://deuk.iptime.org:43306/tshop?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=no&zeroDateTimeBehavior=convertToNull
     driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://deuk.iptime.org:43306/nscandb?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=no&zeroDateTimeBehavior=convertToNull
-    username: nscan
-    password: nscan!1123
+    url: jdbc:log4jdbc:mysql://deuk.iptime.org:43306/labs?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=no&zeroDateTimeBehavior=convertToNull
+    username: teamgate
+    password: tgate!1123
     hikari:
       connection-test-query: SELECT 1
   redis: #Redis 설정정보

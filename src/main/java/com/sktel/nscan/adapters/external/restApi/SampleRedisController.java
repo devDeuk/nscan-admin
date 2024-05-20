@@ -4,7 +4,7 @@ package com.sktel.nscan.adapters.external.restApi;
 
 import com.sktel.nscan.common.dto.ResponseDTO;
 import com.sktel.nscan.domain.sample.dto.SampleDTO;
-import com.sktel.nscan.port.service.SampleRedisServie;
+import com.sktel.nscan.port.service.sample.SampleRedisServie;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

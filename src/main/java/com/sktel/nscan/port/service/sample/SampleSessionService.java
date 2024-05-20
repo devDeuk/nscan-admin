@@ -1,4 +1,4 @@
-package com.sktel.nscan.port.service;
+package com.sktel.nscan.port.service.sample;
 
 /**
  * packageName    : com.sktel.nscan.port.service

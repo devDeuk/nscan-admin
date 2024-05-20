@@ -5,7 +5,7 @@ import com.sktel.nscan.common.error.ErrorCode;
 import com.sktel.nscan.common.error.exception.BizException;
 import com.sktel.nscan.domain.sample.dto.SampleDTO;
 import com.sktel.nscan.port.database.SampleMapper;
-import com.sktel.nscan.port.service.SampleService;
+import com.sktel.nscan.port.service.sample.SampleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

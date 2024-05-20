@@ -27,12 +27,14 @@ spring:
       matching-strategy: ant_path_matcher #swagger3 적용을 위한 설정
 # thymeleaf
   thymeleaf:
-    cache: false
-    check-template-location: true
-    prefix: classpath:/templates/
-    suffix: .html
-    enabled: true
-    encoding: UTF-8
+    enabled: true                     # thymeleaf 사용 여부
+    encoding: UTF-8                   # template 인코딩
+    cache: false                      # cache 활성화 여부, 개발환경에서는 비 활성화
+    check-template-location: true     # 렌더링 전에 template 존재 여부 확인
+    check-template=true: true         # template 위치 존재 여부 확인
+    prefix: classpath:/templates/     # template 경로 접두사
+    suffix: .html                     # template 경로 접미사
+    mode: HTML                        #기본 template 모드, TemplateMode에 정의 (HTML, XML, TEXT, JAVASCRIPT 등)
   message:
     basename: classpath:/messages/message
     cache-duration: 60

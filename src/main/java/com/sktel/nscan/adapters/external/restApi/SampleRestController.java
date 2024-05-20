@@ -4,7 +4,7 @@ package com.sktel.nscan.adapters.external.restApi;
 
 import com.sktel.nscan.common.dto.ResponseDTO;
 import com.sktel.nscan.domain.sample.dto.SampleDTO;
-import com.sktel.nscan.port.service.SampleService;
+import com.sktel.nscan.port.service.sample.SampleService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
