@@ -129,3 +129,45 @@ PathVariable 가져오기
    var contextpath = '[[@{/}]]';
   <img scr="@{/}/test.img">
 ```
+
+---------------------
+## [Thymeleaf] 타임리프 th:onclick 사용하기
+
+### 1. location.href 이용한 경로 이동
+```html
+   th:onclick="|location.href='@{/notice/info}'|"
+```
+
+
+### 2 .태그 내에 attribute를 주어서 함수 호출 할 때, 파라미터로 넘기기
+```html
+<img th:src="${item.imgFileFullPath}" th:alt="${item.altText}" th:linkyn="${item.linkYn}" th:windowyn="${item.windowYn}" th:linktext="${item.linkText}"
+th:onclick="fnClickImage( this.getAttribute('linkyn') , this.getAttribute('windowyn') , this.getAttribute('linktext'))">
+```
+
+
+### 3. location.href 경로 이동 시에 requestParam으로 파라미터를 넘기는 경우
+#### 1) 단일 파라미터인 경우
+
+* 아래와 같은 예시는 실제로는 Url이 이렇게 찍힌다 -> ( /event/ranking?rankCode=RANK_0001 )
+```html
+<button type="button" th:onclick="|location.href='@{/notice/ranking(rankCode=${item.rankCode})}'|">공지 랭킹</button>
+```
+
+####  2) 파라미터가 여러 개인 경우
+
+* 아래와 같은 예시는 실제로는 Url이 이렇게 찍힌다 -> ( /event/ranking?rankCd=RANK_0001&bordSeq=123 )
+```html
+<button type="button" th:onclick="|location.href='@{/event/ranking(rankCd=${rankCd}, bordSeq=${bordSeq})}'|">닫기</button>
+```
+
+
+### 4. 넘겨 받은 Vo를 함수 호출 시에 파라미터로 넘겨줄 경우
+* model에 담은 Vo Class의 변수명이 list인 경우의 예시다.
+
+```html
+th:onclick="fnDetail([[${list.notiSeq}]]);"
+```
+
+ 
+

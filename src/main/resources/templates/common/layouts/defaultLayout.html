@@ -17,8 +17,17 @@
         <!--LeftMenu 영역을 참조합니다.-->
         <div th:replace="common/fragments/leftmenu :: LeftMenuFragment"></div>
 
-        <!--Content 내용 영역을 참조합니다-->
-        <th:block layout:fragment="Content"></th:block>
+        <div id="contents" class="contents">
+            <!-- content -->
+            <div class="my_area">
+                <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
+                <a href="#" class="logout">로그아웃</a>
+            </div>
+
+            <!--Content 내용 영역을 참조합니다-->
+            <th:block layout:fragment="Content"></th:block>
+        </div>
+        <!-- //content -->
     </div>
     <!-- /container -->
 </div>

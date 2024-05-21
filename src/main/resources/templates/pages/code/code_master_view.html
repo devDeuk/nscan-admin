@@ -4,62 +4,46 @@
       layout:decorate="~{common/layouts/defaultLayout}"
       layout:fragment="Content"
 >
-<head>
-    <title>테스트 페이지</title>
-</head>
-
-<body>
-<div id="contents" class="contents">
-    <!-- content -->
-    <div class="my_area">
-        <span class="name"><span>홍길동</span> 님</span> <span>(상담실장)</span>
-        <a href="#" class="logout">로그아웃</a>
-    </div>
-
-    <h2 class="h_tit2">공통 코드 상세</h2>
-    <div class="cont_inner">
-        <table class="tbl_view wide">
-            <colgroup>
-                <col style="width:260px;">
-                <col style="width:43%">
-                <col style="width:180px;">
-                <col style="width:57%">
-            </colgroup>
-            <tbody>
-            <tr>
-                <th>대분류 코드</th>
-                <td colspan="3" th:text="${cdmst.lcl_cd}">${cdmst.lcl_cd}</td>
-            </tr>
-            <tr>
-                <th>코드 <span class="required">*</span></th>
-                <td th:text="${cdmst.cd_val}"></td>
-                <th>코드명 <span class="required">*</span></th>
-                <td th:text="${cdmst.lcl_nm}"></td>
-            </tr>
-            <tr>
-                <th>정렬 순서 <span class="required">*</span></th>
-                <td th:text="${cdmst.sort_seq}"></td>
-                <th>코드 레벨</th>
-                <td th:text="${cdmst.lvl}"></td>
-            </tr>
-            <tr>
-                <th>코드 설명</th>
-                <td colspan="3" th:text="${cdmst.cd_desc}"></td>
-            </tr>
-            <tr>
-                <th>사용 여부</th>
-                <td colspan="3" th:text="${cdmst.use_yn}"></td>
-            </tr>
-            </tbody>
-        </table>
-        <div class="btn_wrap">
-            <button class="btn line" onClick="location.href='/code/list'">목록</button>
-            <div class="right">
-                <button class="btn">수정</button>
-            </div>
+<h2 class="h_tit2">공통 코드 상세</h2>
+<div class="cont_inner">
+    <table class="tbl_view wide">
+        <colgroup>
+            <col style="width:260px;">
+            <col style="width:43%">
+            <col style="width:180px;">
+            <col style="width:57%">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>대분류 코드</th>
+            <td colspan="3" th:text="${cdmst.lcl_cd}">${cdmst.lcl_cd}</td>
+        </tr>
+        <tr>
+            <th>코드 <span class="required">*</span></th>
+            <td th:text="${cdmst.cd_val}"></td>
+            <th>코드명 <span class="required">*</span></th>
+            <td th:text="${cdmst.lcl_nm}"></td>
+        </tr>
+        <tr>
+            <th>정렬 순서 <span class="required">*</span></th>
+            <td th:text="${cdmst.sort_seq}"></td>
+            <th>코드 레벨</th>
+            <td th:text="${cdmst.lvl}"></td>
+        </tr>
+        <tr>
+            <th>코드 설명</th>
+            <td colspan="3" th:text="${cdmst.cd_desc}"></td>
+        </tr>
+        <tr>
+            <th>사용 여부</th>
+            <td colspan="3" th:text="${cdmst.use_yn}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="btn_wrap">
+        <button class="btn line" onClick="location.href='/code/list'">목록</button>
+        <div class="right">
+            <button class="btn">수정</button>
         </div>
-
     </div>
-    <!-- //content -->
-</body>
 </html>
