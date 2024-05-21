@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sktel.nscan.port.database.CodeMstMapper">
-    <select id="codeMstLst" parameterType="com.sktel.nscan.domain.dto.CodeMstDTO" resultType="com.sktel.nscan.domain.dto.CodeMstDTO">
-        SELECT *
+
+    <!--코드마스터 테이블 컬럼 -->
+    <sql id="codeMstColumns">
+        SEQ
+        ,LCL_CD
+        ,CD_VAL
+        ,LCL_NM
+        ,CD_DESC
+        ,LVL
+        ,PRENT_CD
+        ,USE_YN
+        ,SORT_SEQ
+        ,CRE_DT
+        ,CRE_NM
+        ,UPD_DT
+        ,UPD_NM
+    </sql>
+
+    <!-- 코드마스터 목록조회-->
+    <select id="codeMstLst" parameterType="com.sktel.nscan.domain.dto.CodeMstDTO" resultType="CodeMst">
+        SELECT
+            <include refid="codeMstColumns"></include>
         FROM ns_cd_mst
     </select>
+
+    <!-- 코드마스터 상세정보 조회 -->
+    <select id="codeMstDtl" parameterType="long" resultType="CodeMst">
+        SELECT
+            <include refid="codeMstColumns" />
+        FROM
+            ns_cd_mst
+        WHERE
+            seq = #{value}
+    </select>
+
+
+
+
 </mapper>

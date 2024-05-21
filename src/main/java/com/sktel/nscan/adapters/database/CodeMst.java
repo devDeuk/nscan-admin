@@ -6,6 +6,8 @@ import lombok.Setter;
 import lombok.ToString;
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
+
 /**
  * packageName    : com.sktel.nscan.adapters.database
  * fileName       : CodeMstDAO
@@ -22,11 +24,12 @@ import org.apache.ibatis.type.Alias;
 @ToString
 @NoArgsConstructor
 @Alias("CodeMst")
-public class CodeMstDAO {
+public class CodeMst implements Serializable {
+    private String seq;
     private String lcl_cd;
     private String cd_val;
     private String lcl_nm;
-    private String cd_des;
+    private String cd_desc;
     private String lvl;
     private String prent_cd;
     private String use_yn;
@@ -35,7 +38,4 @@ public class CodeMstDAO {
     private String cre_nm;
     private String upd_dt;
     private String upd_nm;
-
-    private String search_txt;
-    private String search_gb;
 }

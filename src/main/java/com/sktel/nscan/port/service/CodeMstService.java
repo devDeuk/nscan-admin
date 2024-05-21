@@ -1,5 +1,6 @@
 package com.sktel.nscan.port.service;
 
+import com.sktel.nscan.adapters.database.CodeMst;
 import com.sktel.nscan.domain.dto.CodeMstDTO;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +28,8 @@ public interface CodeMstService {
      * @return the list
      * @throws Exception the exception
      */
-    List<CodeMstDTO> codeMstLst(CodeMstDTO codeMstDTO) throws Exception;
+    List<CodeMst> codeMstLst(CodeMstDTO codeMstDTO) throws Exception;
 
 
-
+    CodeMst codeMstDtl(Long seq) throws  Exception;
 }

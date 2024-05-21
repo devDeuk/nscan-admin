@@ -59,10 +59,10 @@
                     <col style="width:11%;">
                     <col style="width:9%;">
                     <col style="width:22%;">
-                    <col style="width:18%;">
+                    <col style="width:22%;">
                     <col style="width:5%;">
-                    <col style="width:7%;">
-                    <col style="width:7%;">
+                    <col style="width:5%;">
+                    <col style="width:5%;">
                     <col style="width:7%;">
                     <col style="width:13%;">
                 </colgroup>
@@ -80,41 +80,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+
+                <tr th:if="${not #lists.isEmpty( codelist )}" th:each="row, status : ${codelist}"  th:onclick="|location.href='@{/code/view( seq=${row.seq} )}'|" >
+                    <td th:text="${row.lcl_cd}"></td>
+                    <td th:text="${row.cd_val}"></td>
+                    <td class="left"><span class="txt" th:text="${row.lcl_nm}"></span></td>
+                    <td class="left" th:title="${row.cd_desc}"><span class="txt" th:text="${row.cd_desc}"></span></td>
+                    <td th:text="${row.lvl}"></td>
+                    <td th:text="${row.sort_seq}"></td>
+                    <td th:text="${row.use_yn}"></td>
+                    <td th:text="${row.cre_nm}"></td>
+                    <td th:text="${row.cre_dt}"></td>
+                </tr>
+                <tr th:unless="${not #lists.isEmpty( codelist )}">
                     <td colspan="9" class="no_result"><span>검색 결과가 없습니다.</span></td>
-                </tr>
-                <tr onClick="location.href='/code/view'">
-                    <td>신청자 구분</td>
-                    <td>A0001</td>
-                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
-                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>사용</td>
-                    <td>담당자이름</td>
-                    <td>YYYY-MM-DD HH:MM:SS</td>
-                </tr>
-                <tr>
-                    <td>신청자 구분</td>
-                    <td>A0001</td>
-                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
-                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>사용</td>
-                    <td>담당자이름</td>
-                    <td>YYYY-MM-DD HH:MM:SS</td>
-                </tr>
-                <tr>
-                    <td>신청자 구분</td>
-                    <td>A0001</td>
-                    <td class="left"><span class="txt">[무선] 미성년자 법정대리인 변경(추가/삭제)</span></td>
-                    <td class="left"><span class="txt">신청자 본인/대리인 구분자</span></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>사용</td>
-                    <td>담당자이름</td>
-                    <td>YYYY-MM-DD HH:MM:SS</td>
                 </tr>
 
                 </tbody>

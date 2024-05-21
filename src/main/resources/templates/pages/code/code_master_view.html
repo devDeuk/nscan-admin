@@ -27,28 +27,28 @@
             </colgroup>
             <tbody>
             <tr>
-                <th>상위 그룹</th>
-                <td colspan="3">[000000] 최상위</td>
+                <th>대분류 코드</th>
+                <td colspan="3" th:text="${cdmst.lcl_cd}">${cdmst.lcl_cd}</td>
             </tr>
             <tr>
-                <th>코드ID <span class="required">*</span></th>
-                <td>A0001</td>
+                <th>코드 <span class="required">*</span></th>
+                <td th:text="${cdmst.cd_val}"></td>
                 <th>코드명 <span class="required">*</span></th>
-                <td>신청자 구분</td>
+                <td th:text="${cdmst.lcl_nm}"></td>
             </tr>
             <tr>
                 <th>정렬 순서 <span class="required">*</span></th>
-                <td>1</td>
+                <td th:text="${cdmst.sort_seq}"></td>
                 <th>코드 레벨</th>
-                <td>1</td>
+                <td th:text="${cdmst.lvl}"></td>
             </tr>
             <tr>
                 <th>코드 설명</th>
-                <td colspan="3">청자 본인/대리인 구분자</td>
+                <td colspan="3" th:text="${cdmst.cd_desc}"></td>
             </tr>
             <tr>
                 <th>사용 여부</th>
-                <td colspan="3">사용</td>
+                <td colspan="3" th:text="${cdmst.use_yn}"></td>
             </tr>
             </tbody>
         </table>

@@ -1,5 +1,6 @@
 package com.sktel.nscan.domain.serviceImpl;
 
+import com.sktel.nscan.adapters.database.CodeMst;
 import com.sktel.nscan.domain.dto.CodeMstDTO;
 import com.sktel.nscan.port.database.CodeMstMapper;
 import com.sktel.nscan.port.service.CodeMstService;
@@ -29,7 +30,12 @@ public class CodeMstServiceImpl implements CodeMstService {
 
 
     @Override
-    public List<CodeMstDTO> codeMstLst(CodeMstDTO codeMstDTO) throws Exception {
+    public List<CodeMst> codeMstLst(CodeMstDTO codeMstDTO) throws Exception {
         return codeMstMapper.codeMstLst(codeMstDTO);
+    }
+
+    @Override
+    public CodeMst codeMstDtl(Long seq) throws Exception {
+        return codeMstMapper.codeMstDtl(seq);
     }
 }

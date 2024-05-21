@@ -21,10 +21,11 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class CodeMstDTO {
+    private String seq;
     private String lcl_cd;
     private String cd_val;
     private String lcl_nm;
-    private String cd_des;
+    private String cd_desc;
     private String lvl;
     private String prent_cd;
     private String use_yn;

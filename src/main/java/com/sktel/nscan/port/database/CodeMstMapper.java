@@ -1,7 +1,7 @@
 package com.sktel.nscan.port.database;
 
+import com.sktel.nscan.adapters.database.CodeMst;
 import com.sktel.nscan.domain.dto.CodeMstDTO;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -20,6 +20,21 @@ import java.util.List;
 @Mapper
 public interface CodeMstMapper {
 
-    List<CodeMstDTO> codeMstLst(CodeMstDTO codeMstDTO);
+    /**
+     * Code mst 리스트
+     *
+     * @param codeMstDTO the code mst dto
+     * @return the list
+     */
+    List<CodeMst> codeMstLst(CodeMstDTO codeMstDTO);
+
+
+    /**
+     * Code mst 상세
+     *
+     * @param seq the seq
+     * @return the code mst
+     */
+    CodeMst codeMstDtl(long seq);
 
 }

@@ -24,8 +24,8 @@ public class CheckRequestInterceptor implements HandlerInterceptor {
 		if(servletPath.indexOf(".jpg") > 0){
 			return true;
 		}
-		log.debug("===============================================");
-		log.debug("==================== BEGIN ====================");
+		log.info("===============================================");
+		log.info("==================== BEGIN ====================");
 		//log.info("Server Ip : {}", executeIp);
 		//log.info("serverType : {}", environments.getServerType());
 		log.info("request.getRemoteHost() : {}", StringUtil.strNull(request.getRemoteHost()));
@@ -46,7 +46,7 @@ public class CheckRequestInterceptor implements HandlerInterceptor {
 //			if (!environments.isLocal() && !environments.isDevelopmemt()) {
 //
 //				if (basePath.startsWith("http://")) {
-//					log.debug("http 접근시 에러 발생");
+//					log.info("http 접근시 에러 발생");
 //					String msg = "잘못된 접근입니다. https로 재접속 해주시기 바랍니다.";
 //					throw new BizException("", msg);
 //				}
@@ -64,44 +64,7 @@ public class CheckRequestInterceptor implements HandlerInterceptor {
 			 *  메인 페이지는 예외
 			 */
 			HttpSession session = request.getSession();
-			/*
-			if ( servletPath.indexOf("/login/") < 0 && servletPath.indexOf("/main/error") < 0){
-
-				if (session == null || session.getAttribute("user_id") == null || "".equals(session.getAttribute("user_id"))) {
-					log.debug("세션이 없는 경우 페이지 진입 금지");
-					throw new BizException(ErrorCode.SESSESION_EXPIRED);
-				}
-			}
-			*/
-			/**
-			 *  권한 있는 메뉴인지 확인
-			 */	
-			/*int idx1 = servletPath.indexOf("/");
-			int idx2 = servletPath.substring(idx1+1).indexOf("/");
-			String menu = servletPath.substring(idx1,idx2+2);
-			boolean auth = false;
-			
-			if ("/login/".equals(menu) || "/main/".equals(menu)) {
-				auth = true;
-			} else {
-				String menuUrl = (String)session.getAttribute("menu_url");
-				if (menuUrl != null) {
-					String[] menuList = menuUrl.split("\\|"); 
-					if (menuList != null) {
-						for (int i=0; i<menuList.length; i++) {
-							if (menuList[i].indexOf(menu) >= 0) {
-								auth = true;
-							}
-						}
-					}
-				}
-			}
-
-			if (auth == false) {
-				throw new BizException("MENUAUTH", "해당 메뉴에 접근 권한이 없습니다.");
-			}*/
-			
-			log.info("----------------------------------------------------------------------------------------");	
+			log.info("----------------------------------------------------------------------------------------");
 			log.info("# Session Value");
 			log.info("----------------------------------------------------------------------------------------");				
 			Enumeration<String> emu = session.getAttributeNames();
@@ -125,14 +88,15 @@ public class CheckRequestInterceptor implements HandlerInterceptor {
 			//ex.printStackTrace();
 			throw ex;
 		}
-		
-		//return super.preHandle(request, response, handler);
-		return true;		//true면 접근허가
+
+		//return true;		//true면 접근허가
+		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-		log.debug("==================== END ======================");
-		log.debug("===============================================");
+		log.info("==================== END ======================");
+		log.info("===============================================");
+		HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
 	}
 }
